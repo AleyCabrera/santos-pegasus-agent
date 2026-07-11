@@ -1,6 +1,4 @@
 
-#### **📄 data/csv/incidentes_protocolo.csv**
-```csv
 Severidad,Nivel,Descripcion,Tiempo_Respuesta,Accion_Immediata,Escalamiento
 0,Critico,Sistema completo caído o pérdida de datos,15 minutos,Alertar a todos los equipos,CTO + Director de Operaciones
 1,Alto,Caída de servicio crítico afectando a >50% usuarios,30 minutos,Formar equipo de incidentes,Head de Ingeniería

@@ -1,0 +1,1427 @@
+2026-07-10 20:01:58 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:04:05 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:09:20 | INFO     | __main__:<module> - ✅ Logger funcionando correctamente
+2026-07-10 20:09:20 | INFO     | __main__:<module> - OLLAMA_HOST: http://localhost:11434
+2026-07-10 20:09:20 | INFO     | __main__:<module> - DATA_PATH: data
+2026-07-10 20:09:20 | INFO     | __main__:<module> - LOG_LEVEL: INFO
+2026-07-10 20:09:47 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:12:56 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:12:56 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:12:56 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:12:56 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:16:43 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:16:43 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:16:43 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:16:43 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - Cargando CSV: test.csv
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - CSV tiene 3 filas y 3 columnas
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 3 filas del CSV
+2026-07-10 20:23:09 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:23:09 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:23:09 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:23:09 | ERROR    | app.loaders.csv_loader:load - Error al cargar CSV: Error tokenizing data. C error: Expected 1 fields in line 4, saw 6
+
+2026-07-10 20:23:09 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:23:09 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:23:09 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:23:09 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:27:03 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:27:03 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:27:03 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:27:03 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:27:03 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:27:03 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:27:03 | ERROR    | app.loaders.csv_loader:load - Error al cargar CSV: Error tokenizing data. C error: Expected 1 fields in line 4, saw 6
+
+2026-07-10 20:27:03 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:27:04 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:27:04 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:27:04 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:28:50 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:28:50 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:28:50 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:28:50 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:28:50 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:28:50 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:28:50 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:28:50 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:28:50 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:28:50 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:28:50 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:28:50 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:28:50 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:31:00 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:31:00 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:31:00 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:31:00 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:31:00 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:31:00 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:31:00 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:31:00 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:31:00 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:31:00 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:31:00 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:31:00 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:31:00 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:33:25 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:33:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:33:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:33:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:33:25 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:33:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:33:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:33:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:33:25 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:35:13 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:35:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:35:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:35:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:35:13 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:35:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:35:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:35:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:35:13 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:35:13 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:35:13 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:35:13 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:35:13 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:36:12 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:36:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:36:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:36:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:36:12 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:36:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:36:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:36:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:36:12 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:36:13 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:36:13 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:36:13 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:36:13 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:36:42 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:36:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:36:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:36:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:36:42 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:36:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:36:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:36:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:36:42 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:36:42 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:36:42 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:36:42 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:36:42 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:39:53 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:39:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:39:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:39:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:39:53 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:39:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:39:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:39:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:39:53 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:39:53 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:39:53 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:39:53 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:39:54 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:55:35 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:55:35 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 20:55:35 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:55:35 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 20:55:35 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 20:55:35 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 20:55:35 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 20:55:35 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:55:35 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:55:35 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 20:55:35 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:55:35 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 20:55:35 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:55:35 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 20:55:35 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:55:35 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:55:35 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:55:35 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:55:36 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:55:36 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:55:36 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:55:36 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:56:33 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:56:33 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 20:56:33 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:56:33 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 20:56:33 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 20:56:33 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 20:56:33 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 20:56:33 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:56:33 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:56:33 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 20:56:33 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:56:33 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 20:56:33 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:56:33 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 20:56:33 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:56:33 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:56:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:56:33 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:56:34 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:56:34 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:56:34 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:56:34 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:57:13 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:57:13 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 20:57:13 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:57:13 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 20:57:13 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 20:57:13 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 20:57:13 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 20:57:13 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:57:13 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:57:13 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 20:57:13 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:57:13 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 20:57:13 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:57:13 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 20:57:13 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:57:13 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:57:13 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:57:13 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:57:14 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:57:14 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:57:14 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:57:14 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 20:59:40 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:59:40 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 20:59:40 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 20:59:40 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 20:59:40 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 20:59:40 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 20:59:40 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 20:59:40 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 20:59:40 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:59:40 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 20:59:40 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 20:59:40 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 20:59:40 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:59:40 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 20:59:40 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 20:59:40 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 20:59:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 20:59:40 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 20:59:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 20:59:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 20:59:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 20:59:40 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:04:22 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:04:22 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:04:22 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:04:22 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:04:22 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:04:22 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:04:22 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:04:22 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:04:22 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:04:22 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:04:23 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:04:23 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:04:23 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:04:23 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:04:23 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:04:23 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:04:23 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:04:23 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:04:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:04:23 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:05:10 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:05:10 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:05:10 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:05:10 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:05:10 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:05:10 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:05:10 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:05:10 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:05:10 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:05:10 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:05:10 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:05:10 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:05:10 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:10 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 3 chunks (estrategia: sentence, tamaño: 50)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:10 | WARNING  | app.utils.text_processor:process_document - Documento vacío, saltando chunking
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 1 documentos
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos: 12
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: recursive
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'recursive'}
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: sentence
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'sentence'}
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: paragraph
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:10 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'paragraph'}
+2026-07-10 21:05:10 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-10 21:05:10 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:05:10 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:10 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:10 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:05:11 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:05:11 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:05:11 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:05:11 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:05:57 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:05:57 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:05:57 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:05:57 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:05:57 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:05:57 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:05:57 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:05:57 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:05:57 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:05:57 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:05:57 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:05:57 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:05:57 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:57 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:57 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 3 chunks (estrategia: sentence, tamaño: 50)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:58 | WARNING  | app.utils.text_processor:process_document - Documento vacío, saltando chunking
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 1 documentos
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos: 12
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: recursive
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'recursive'}
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: sentence
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'sentence'}
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: paragraph
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:05:58 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'paragraph'}
+2026-07-10 21:05:58 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-10 21:05:58 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:05:58 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:05:58 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:05:58 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:05:58 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:05:58 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:05:58 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:05:58 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:06:28 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:06:28 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:06:28 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:06:28 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:06:28 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:06:28 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:06:28 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:06:28 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:06:28 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:06:28 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:06:28 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:06:28 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:06:28 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:06:28 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 3 chunks (estrategia: sentence, tamaño: 50)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:06:28 | WARNING  | app.utils.text_processor:process_document - Documento vacío, saltando chunking
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 1 documentos
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos: 12
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: recursive
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'recursive'}
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: sentence
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'sentence'}
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: paragraph
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:06:28 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'paragraph'}
+2026-07-10 21:06:28 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-10 21:06:28 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:06:28 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:06:28 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:06:28 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:06:28 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:06:28 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:06:28 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:06:28 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:10:41 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:10:41 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:10:41 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:10:41 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:10:41 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:10:41 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:10:41 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:10:41 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:10:41 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:10:41 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:10:41 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:10:41 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:10:41 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:10:41 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 2 documentos
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 2 documentos
+2026-07-10 21:10:41 | WARNING  | app.utils.text_processor:process_document - Documento vacío, saltando chunking
+2026-07-10 21:10:41 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 1 documentos
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 2 documentos
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos: 12
+2026-07-10 21:10:41 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: recursive
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | ERROR    | app.utils.text_processor:process_documents - Error procesando documento: 'TextNormalizer' object has no attribute 'normalize_whitespace'
+2026-07-10 21:10:41 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 12 documentos
+2026-07-10 21:10:41 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:10:41 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:10:41 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:10:41 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:10:41 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:10:41 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:10:41 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:10:41 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:12:23 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:12:23 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:12:23 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:12:23 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:12:23 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:12:23 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:12:23 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:12:23 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:12:23 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:12:23 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:12:23 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:12:23 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:12:23 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:12:23 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 3 chunks (estrategia: sentence, tamaño: 50)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:12:23 | WARNING  | app.utils.text_processor:process_document - Documento vacío, saltando chunking
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 0 chunks desde 1 documentos
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: character, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 100)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 2 chunks desde 2 documentos
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos: 12
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: recursive
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: recursive, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'recursive'}
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: sentence
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: sentence, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'sentence'}
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: paragraph
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_document - ✅ Documento procesado: 1 chunks (estrategia: paragraph, tamaño: 300)
+2026-07-10 21:12:23 | INFO     | app.utils.text_processor:process_documents - 📊 Procesamiento completo: 12 chunks desde 12 documentos
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 161 caracteres
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 124 - 199 caracteres
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway Descripcion: Punto de entrada único para todas las API Base_Datos: Redis Comunicacion: HTTP REST Dependencias: Todos los servicios...
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    ========================================
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 152, 'strategy': 'paragraph'}
+2026-07-10 21:12:23 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-10 21:12:23 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:12:23 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:12:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:12:23 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:12:23 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:12:23 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:12:23 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:12:23 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:16:42 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:16:42 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:16:42 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:16:42 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:16:42 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:16:42 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:16:42 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:16:42 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:16:42 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:16:42 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:16:42 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:16:42 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:16:42 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:16:42 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:16:42 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:16:42 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:16:42 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:16:42 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:16:42 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:16:42 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:16:42 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:16:42 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:16:42 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:27:39 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:27:39 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:27:39 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:27:39 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:27:39 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:27:39 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:27:39 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:27:39 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:27:39 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:27:39 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:27:39 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:27:39 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:27:39 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:27:39 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:27:39 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:27:40 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:27:40 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:27:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:27:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:27:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:27:40 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:27:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:27:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:27:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:27:40 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:27:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:27:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:27:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:27:40 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:28:23 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:28:23 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:28:23 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:28:23 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:28:23 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:28:23 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:28:23 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:28:23 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:28:23 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:28:23 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:28:23 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:28:23 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:28:23 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:28:23 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:28:23 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:28:23 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:28:24 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:28:24 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:28:24 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:28:24 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:28:24 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:28:24 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:28:24 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:28:24 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:28:24 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:28:24 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:28:24 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:28:24 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:28:24 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:30:25 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:30:25 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:30:25 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:30:25 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:30:25 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:30:25 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:30:25 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:30:25 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:30:25 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:30:25 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:30:25 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:30:25 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:30:25 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:25 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking - 📊 Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos: 12
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking - 
+🔧 Probando estrategia: recursive
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 0
+2026-07-10 21:30:25 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 0 caracteres
+2026-07-10 21:30:25 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:30:25 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:25 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:25 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:30:25 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:30:25 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:30:25 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:30:25 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:30:53 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:30:53 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:30:53 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:30:53 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:30:53 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:30:53 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:30:53 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:30:53 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:30:53 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:30:53 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:30:53 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:30:53 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:30:53 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:53 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-10 21:30:53 | WARNING  | test_chunking_manual:test_chunking - ⚠️ No hay PDFs en data/pdfs/
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 12
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:30:53 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia recursive: 'min_chunk_size'
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:30:53 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia sentence: 'min_chunk_size'
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:30:53 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia character: 'min_chunk_size'
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:30:53 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia overlap: 'min_chunk_size'
+2026-07-10 21:30:53 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-10 21:30:53 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:30:53 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:30:53 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:30:53 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:30:53 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:30:53 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:30:53 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:30:53 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-10 21:31:48 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:31:48 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-10 21:31:48 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-10 21:31:48 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-10 21:31:48 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-10 21:31:48 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-10 21:31:48 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-10 21:31:48 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-10 21:31:48 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:31:48 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-10 21:31:48 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-10 21:31:48 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-10 21:31:48 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:31:48 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-10 21:31:48 | WARNING  | test_chunking_manual:test_chunking - ⚠️ No hay PDFs en data/pdfs/
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 12
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:31:48 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia recursive: 'min_chunk_size'
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:31:48 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia sentence: 'min_chunk_size'
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:31:48 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia character: 'min_chunk_size'
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-10 21:31:48 | ERROR    | test_chunking_manual:test_chunking -    ❌ Error con estrategia overlap: 'min_chunk_size'
+2026-07-10 21:31:48 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-10 21:31:48 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-10 21:31:48 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-10 21:31:48 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-10 21:31:48 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-10 21:31:48 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-10 21:31:48 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-10 21:31:48 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-10 21:31:48 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf

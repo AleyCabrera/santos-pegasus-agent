@@ -5,11 +5,10 @@ pydantic-settings==2.5.0
 
 # Document Processing
 PyPDF2==3.0.1
-pandas==3.0.3              # <--- CAMBIADO de 2.0.3 a 3.0.3
 markdown==3.7
 
-# AI/ML
-langchain==0.3.1
+# AI/ML - Versiones compatibles con Python 3.13
+langchain==0.3.1           # O la última compatible
 langchain-community==0.3.1
 langchain-ollama==0.1.0
 sentence-transformers==2.2.2
