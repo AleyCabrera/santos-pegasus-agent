@@ -6,4 +6,4 @@ echo "*.log" >> .gitignore
 echo "vectorstore/" >> .gitignore
 echo ".DS_Store" >> .gitignore
 echo ".vscode/" >> .gitignore
-echo ".idea/" >> .gitignore.venv/
+echo ".idea/" >> .gitignore
