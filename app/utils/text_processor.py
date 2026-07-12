@@ -6,6 +6,7 @@ import re
 from typing import List, Dict, Any, Optional
 from app.utils.logger import logger
 
+
 class TextNormalizer:
     """Normalizador de texto para procesamiento de documentos"""
     
@@ -22,7 +23,7 @@ class TextNormalizer:
         
         Args:
             text: Texto a limpiar
-            
+        
         Returns:
             Texto limpio y normalizado
         """
@@ -100,7 +101,6 @@ class ChunkingStrategy:
         
         # Dividir por oraciones
         sentences = re.split(r'(?<=[.!?])\s+', text)
-        
         chunks = []
         current_chunk = ""
         
@@ -130,7 +130,6 @@ class ChunkingStrategy:
         
         # Dividir por oraciones
         sentences = re.split(r'(?<=[.!?])\s+', text)
-        
         chunks = []
         current_chunk = ""
         
@@ -145,6 +144,7 @@ class ChunkingStrategy:
                 # Dividir la oración larga por palabras
                 words = sentence.split()
                 temp_chunk = ""
+                
                 for word in words:
                     if len(temp_chunk) + len(word) + 1 <= self.chunk_size:
                         if temp_chunk:
@@ -154,6 +154,7 @@ class ChunkingStrategy:
                         if temp_chunk:
                             chunks.append(temp_chunk.strip())
                         temp_chunk = word
+                
                 if temp_chunk:
                     current_chunk = temp_chunk
             else:
@@ -181,8 +182,8 @@ class ChunkingStrategy:
         
         words = text.split()
         chunks = []
-        
         i = 0
+        
         while i < len(words):
             chunk_words = words[i:i + self.chunk_size]
             chunks.append(" ".join(chunk_words))
@@ -192,9 +193,10 @@ class ChunkingStrategy:
     
     def process_document(self, document: Dict[str, Any], strategy: str = "recursive") -> List[Dict[str, Any]]:
         """Procesa un documento y lo divide en chunks"""
-        text = document.get("page_content", "")
+        # CORREGIDO: Buscar tanto 'page_content' como 'content'
+        text = document.get("page_content") or document.get("content", "")
         
-        if not text:
+        if not text or not text.strip():
             return []
         
         # Seleccionar estrategia
@@ -242,9 +244,11 @@ class DocumentProcessor:
     
     def process_document(self, document: Dict[str, Any], strategy: str = "recursive") -> List[Dict[str, Any]]:
         """Procesa un solo documento"""
-        # Limpiar texto
+        # CORREGIDO: Buscar tanto 'page_content' como 'content'
         if "page_content" in document:
             document["page_content"] = self.normalizer.clean_text(document["page_content"])
+        elif "content" in document:
+            document["page_content"] = self.normalizer.clean_text(document["content"])
         
         # Dividir en chunks
         return self.chunking_strategy.process_document(document, strategy)
@@ -252,23 +256,42 @@ class DocumentProcessor:
     def get_statistics(self, documents: List[Dict[str, Any]]) -> Dict[str, Any]:
         """Obtiene estadísticas de los documentos"""
         if not documents:
-            return {"total_documents": 0, "total_chunks": 0, "avg_chunk_size": 0}
+            # CORREGIDO: Incluir todas las claves incluso si está vacío
+            return {
+                "total_documents": 0,
+                "total_chunks": 0,
+                "avg_chunk_size": 0,
+                "min_chunk_size": 0,
+                "max_chunk_size": 0
+            }
         
-        total_chunks = sum(1 for doc in documents if "chunk_index" in doc.get("metadata", {}))
+        # CORREGIDO: Buscar chunks que tengan 'chunk_index' en metadata
+        chunked_docs = [doc for doc in documents if "chunk_index" in doc.get("metadata", {})]
+        
+        if not chunked_docs:
+            return {
+                "total_documents": len(documents),
+                "total_chunks": 0,
+                "avg_chunk_size": 0,
+                "min_chunk_size": 0,
+                "max_chunk_size": 0
+            }
+        
         chunk_sizes = [
             len(doc.get("page_content", "")) 
-            for doc in documents 
-            if "chunk_index" in doc.get("metadata", {})
+            for doc in chunked_docs 
+            if doc.get("page_content")
         ]
         
         return {
             "total_documents": len(documents),
-            "total_chunks": total_chunks,
+            "total_chunks": len(chunked_docs),
             "avg_chunk_size": sum(chunk_sizes) / len(chunk_sizes) if chunk_sizes else 0,
             "min_chunk_size": min(chunk_sizes) if chunk_sizes else 0,
             "max_chunk_size": max(chunk_sizes) if chunk_sizes else 0
         }
-        
+
+
 class Chunk:
     """Representa un chunk de texto con metadatos"""
     
