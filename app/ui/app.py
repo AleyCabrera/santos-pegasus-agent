@@ -1,4 +1,4 @@
-"""Interfaz de usuario con Streamlit para el agente RAG"""
+"""Interfaz de usuario con Streamlit para el agente RAG - Versión Mejorada"""
 
 import streamlit as st
 import sys
@@ -8,11 +8,9 @@ import time
 # ============================================
 # CONFIGURACIÓN DE IMPORTACIONES
 # ============================================
-# Agregar la raíz del proyecto al path de Python
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 
-# Ahora podemos importar correctamente
 from app.services.chat_service import ChatService
 from app.services.indexing_service import IndexingService
 from app.config import settings
@@ -26,116 +24,217 @@ st.set_page_config(
     page_title="Santos Pegasus - Agente IA",
     page_icon="🤖",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': "Santos Pegasus Soluciones - Agente IA RAG v1.0.0"
+    }
 )
 
 # ============================================
-# CSS PERSONALIZADO
+# CSS PERSONALIZADO MEJORADO
 # ============================================
 st.markdown("""
 <style>
-    /* Estilo principal */
+    /* Importar fuente moderna */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    /* Variables de color */
+    :root {
+        --primary-color: #667eea;
+        --secondary-color: #764ba2;
+        --background-dark: #0f172a;
+        --surface-dark: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --error-color: #ef4444;
+    }
+    
+    /* Reset y base */
+    * {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    /* Header principal mejorado */
     .main-header {
-        background: linear-gradient(90deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-        padding: 1.5rem;
-        border-radius: 10px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2rem;
+        border-radius: 16px;
         margin-bottom: 2rem;
         color: white;
         text-align: center;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .main-header h1 {
         font-size: 2.5rem;
+        font-weight: 700;
         margin: 0;
-        color: #e0e0e0;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        letter-spacing: -0.5px;
     }
     
     .main-header p {
-        font-size: 1rem;
-        color: #aaa;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.9);
         margin: 0.5rem 0 0 0;
+        font-weight: 400;
     }
     
-    /* Chat messages */
+    /* Mensajes del chat mejorados */
     .user-message {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
-        padding: 12px 18px;
-        border-radius: 18px 18px 4px 18px;
-        margin: 8px 0;
+        padding: 16px 20px;
+        border-radius: 20px 20px 4px 20px;
+        margin: 12px 0;
         max-width: 80%;
         float: right;
         clear: both;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        line-height: 1.6;
+        font-size: 0.95rem;
     }
     
     .assistant-message {
-        background: #f0f2f6;
-        color: #1a1a2e;
-        padding: 12px 18px;
-        border-radius: 18px 18px 18px 4px;
-        margin: 8px 0;
+        background: #f8fafc;
+        color: #1e293b;
+        padding: 16px 20px;
+        border-radius: 20px 20px 20px 4px;
+        margin: 12px 0;
         max-width: 80%;
         float: left;
         clear: both;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         border-left: 4px solid #667eea;
+        line-height: 1.6;
+        font-size: 0.95rem;
     }
     
     .message-container {
         display: flow-root;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
+        animation: fadeIn 0.3s ease-in;
     }
     
-    /* Fuentes */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Badges de fuentes mejorados */
     .source-badge {
-        background: #e8f0fe;
-        color: #1a73e8;
-        padding: 2px 10px;
-        border-radius: 12px;
-        font-size: 0.75rem;
+        background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        color: #4f46e5;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
         display: inline-block;
-        margin: 2px 4px;
+        margin: 4px 6px 4px 0;
+        border: 1px solid rgba(79, 70, 229, 0.2);
+        transition: all 0.2s;
     }
     
-    /* Sidebar */
+    .source-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+    }
+    
+    /* Sidebar mejorado */
     .sidebar-header {
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-size: 1.1rem;
+        font-weight: 600;
         color: #667eea;
         border-bottom: 2px solid #667eea;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
     }
     
     .stats-card {
-        background: #f8f9fa;
-        padding: 10px 15px;
-        border-radius: 8px;
-        margin: 5px 0;
-        border-left: 3px solid #667eea;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #1e293b;
+        padding: 12px 16px;
+        border-radius: 12px;
+        margin: 8px 0;
+        border-left: 4px solid #667eea;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        transition: all 0.2s;
     }
     
-    /* Input */
+    .stats-card:hover {
+        transform: translateX(4px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .stats-card b {
+        color: #1e293b;
+        font-weight: 600;
+    }
+    
+    /* Input mejorado */
     .stTextInput > div > div > input {
-        border-radius: 25px;
-        border: 2px solid #667eea;
-        padding: 10px 20px;
-    }
-    
-    .stButton > button {
-        border-radius: 25px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        padding: 10px 30px;
-        font-weight: bold;
+        border-radius: 12px;
+        border: 2px solid #e2e8f0;
+        padding: 12px 20px;
+        font-size: 0.95rem;
         transition: all 0.3s;
     }
     
+    .stTextInput > div > div > input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    /* Botones mejorados */
+    .stButton > button {
+        border-radius: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    }
+    
     .stButton > button:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .stButton > button:active {
+        transform: translateY(0);
+    }
+    
+    /* Contenedor de chat scrollable */
+    .chat-container {
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #e2e8f0;
+    }
+    
+    /* Footer mejorado */
+    .footer {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-top: 2rem;
+        border: 1px solid #e2e8f0;
+    }
+    
+    /* Alertas mejoradas */
+    .stAlert {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     
     /* Responsive */
@@ -146,6 +245,29 @@ st.markdown("""
         .main-header h1 {
             font-size: 1.8rem;
         }
+        .main-header {
+            padding: 1.5rem;
+        }
+    }
+    
+    /* Scrollbar personalizado */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -177,28 +299,28 @@ def get_indexing_service():
 
 def display_message(role: str, content: str, sources: list = None):
     """Muestra un mensaje en el chat"""
-    container = st.container()
-    
-    with container:
-        if role == "user":
-            st.markdown(f'<div class="message-container"><div class="user-message">{content}</div></div>', unsafe_allow_html=True)
-        else:
-            st.markdown(f'<div class="message-container"><div class="assistant-message">{content}</div></div>', unsafe_allow_html=True)
-            
-            # Mostrar fuentes si existen
-            if sources:
-                st.markdown("**📚 Fuentes:**")
-                for source in sources[:3]:
-                    st.markdown(f'<span class="source-badge">📄 {source}</span>', unsafe_allow_html=True)
-                if len(sources) > 3:
-                    st.caption(f"... y {len(sources) - 3} fuentes más")
-
-
-def display_chat_history():
-    """Muestra el historial de conversación"""
-    if "messages" in st.session_state:
-        for msg in st.session_state.messages:
-            display_message(msg["role"], msg["content"], msg.get("sources"))
+    if role == "user":
+        st.markdown(f'''
+        <div class="message-container">
+            <div class="user-message">{content}</div>
+        </div>
+        ''', unsafe_allow_html=True)
+    else:
+        st.markdown(f'''
+        <div class="message-container">
+            <div class="assistant-message">{content}</div>
+        </div>
+        ''', unsafe_allow_html=True)
+        
+        # Mostrar fuentes si existen
+        if sources:
+            st.markdown("**📚 Fuentes consultadas:**")
+            sources_html = ""
+            for source in sources[:3]:
+                sources_html += f'<span class="source-badge">📄 {source}</span>'
+            st.markdown(sources_html, unsafe_allow_html=True)
+            if len(sources) > 3:
+                st.caption(f"... y {len(sources) - 3} fuentes más")
 
 
 def get_welcome_message():
@@ -208,12 +330,12 @@ def get_welcome_message():
 
     Puedo ayudarte con preguntas sobre:
     - 📋 **Onboarding** - Manual de incorporación
-    - 🔧 **Backend** - Guías de ingeniería
+    -  **Backend** - Guías de ingeniería
     - 🎨 **Frontend** - Estándares de desarrollo
     - 🚨 **Incidentes** - Protocolos de respuesta
     - 🏗️ **Arquitectura** - Microservicios
 
-    **¿Qué necesitas saber?** 🤔
+    **¿En qué puedo ayudarte hoy?** 🤔
     """
 
 
@@ -221,7 +343,6 @@ def get_welcome_message():
 # INICIALIZACIÓN DEL ESTADO
 # ============================================
 
-# Inicializar estado de la sesión
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "assistant", "content": get_welcome_message(), "sources": []}
@@ -235,11 +356,19 @@ if "k_value" not in st.session_state:
 
 
 # ============================================
-# SIDEBAR - CONFIGURACIÓN
+# SIDEBAR - CONFIGURACIÓN MEJORADA
 # ============================================
 with st.sidebar:
-    st.image("https://img.icons8.com/fluency/96/000000/artificial-intelligence.png", width=80)
-    st.markdown('<div class="sidebar-header">🤖 Configuración</div>', unsafe_allow_html=True)
+    # Logo y título
+    st.markdown("""
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🤖</div>
+        <h2 style="color: #667eea; margin: 0; font-size: 1.5rem;">Santos Pegasus</h2>
+        <p style="color: #94a3b8; font-size: 0.85rem; margin: 0.25rem 0 0 0;">Agente IA RAG</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown('<div class="sidebar-header">️ Configuración</div>', unsafe_allow_html=True)
     
     # Modelo
     st.markdown("**🧠 Modelo LLM**")
@@ -247,7 +376,7 @@ with st.sidebar:
     st.caption(f"Host: {settings.OLLAMA_HOST}")
     
     # Parámetros
-    st.markdown("**⚙️ Parámetros de búsqueda**")
+    st.markdown("**📊 Parámetros de búsqueda**")
     st.session_state.k_value = st.slider(
         "Documentos recuperados (k)",
         min_value=1,
@@ -256,8 +385,11 @@ with st.sidebar:
         help="Número de documentos a recuperar de la base vectorial"
     )
     
-    st.caption(f"🌡️ Temperatura: {settings.OLLAMA_TEMPERATURE}")
-    st.caption(f"📏 Contexto: {settings.OLLAMA_CONTEXT_WINDOW}")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.caption(f"️ Temp: {settings.OLLAMA_TEMPERATURE}")
+    with col2:
+        st.caption(f"📏 Contexto: {settings.OLLAMA_CONTEXT_WINDOW}")
     
     # Estadísticas
     st.markdown("---")
@@ -269,52 +401,53 @@ with st.sidebar:
             
             st.markdown(f"""
             <div class="stats-card">
-                📚 <b>Documentos en store:</b> {stats.get('documents_in_store', 0)}
+                📚 <b>Documentos:</b> {stats.get('documents_in_store', 0)}
             </div>
             <div class="stats-card">
-                💬 <b>Mensajes en historial:</b> {stats.get('history_length', 0)}
+                💬 <b>Mensajes:</b> {stats.get('history_length', 0)}
             </div>
             <div class="stats-card">
-                🤖 <b>Modelo:</b> {stats.get('model', 'N/A')}
+                🤖 <b>Modelo:</b> {stats.get('model', 'N/A')[:20]}
             </div>
             <div class="stats-card">
-                📏 <b>Dimensión embeddings:</b> {stats.get('embedding_model', 'N/A')}
+                 <b>Embeddings:</b> {stats.get('embedding_model', 'N/A')[:20]}
             </div>
             """, unsafe_allow_html=True)
         except Exception as e:
-            st.warning(f"No se pudieron obtener estadísticas: {e}")
+            st.warning(f"No se pudieron obtener estadísticas")
     
     # Acciones
     st.markdown("---")
-    st.markdown("**🛠️ Acciones**")
+    st.markdown('<div class="sidebar-header">🛠️ Acciones</div>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("🧹 Limpiar historial", use_container_width=True):
+        if st.button("🧹 Limpiar", use_container_width=True, help="Limpiar historial de conversación"):
             if st.session_state.chat_service:
                 st.session_state.chat_service.clear_history()
                 st.session_state.messages = [
                     {"role": "assistant", "content": get_welcome_message(), "sources": []}
                 ]
-                st.success("✅ Historial limpiado!")
+                st.success("✅ Historial limpiado")
                 st.rerun()
     
     with col2:
-        if st.button("🔄 Re-indexar", use_container_width=True):
+        if st.button("🔄 Re-indexar", use_container_width=True, help="Re-indexar todos los documentos"):
             try:
-                with st.spinner("🔄 Re-indexando documentos..."):
+                with st.spinner("Re-indexando..."):
                     indexer = get_indexing_service()
                     result = indexer.reindex()
-                    st.success(f"✅ Re-indexación completada! {result.get('total_added', 0)} chunks agregados")
+                    st.success(f"✅ {result.get('total_added', 0)} chunks")
                     st.rerun()
             except Exception as e:
-                st.error(f"❌ Error: {e}")
+                st.error(f"Error: {e}")
     
     # Información
     st.markdown("---")
-    st.markdown("**ℹ️ Información**")
+    st.markdown('<div class="sidebar-header">ℹ️ Información</div>', unsafe_allow_html=True)
     st.caption(f"📌 Versión: {settings.APP_VERSION}")
-    st.caption("🔒 100% Open Source - Ollama Local")
+    st.caption("🔒 100% Open Source")
+    st.caption("🤖 Ollama Local")
 
 
 # ============================================
@@ -325,11 +458,11 @@ with st.sidebar:
 st.markdown("""
 <div class="main-header">
     <h1>🤖 Santos Pegasus - Agente IA RAG</h1>
-    <p>Asistente virtual con Retrieval Augmented Generation (RAG)</p>
+    <p>Asistente virtual con Retrieval Augmented Generation</p>
 </div>
 """, unsafe_allow_html=True)
 
-# Verificar conexión con Ollama
+# Verificar conexión
 if st.session_state.chat_service is None:
     st.error("""
     ❌ **No se pudo conectar con el servicio de chat.**
@@ -343,36 +476,25 @@ if st.session_state.chat_service is None:
 
 
 # ============================================
-# CHAT
+# CHAT MEJORADO
 # ============================================
 
-# Mostrar historial de mensajes
-chat_container = st.container()
+# Contenedor de chat
+st.markdown('<div class="chat-container">', unsafe_allow_html=True)
 
-with chat_container:
-    # Crear scrollable container
-    chat_scroll = st.container(height=500)
-    
-    with chat_scroll:
-        for msg in st.session_state.messages:
-            display_message(msg["role"], msg["content"], msg.get("sources"))
+# Mostrar mensajes
+for msg in st.session_state.messages:
+    display_message(msg["role"], msg["content"], msg.get("sources"))
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 
 # ============================================
-# INPUT DE PREGUNTAS
+# INPUT DE PREGUNTAS MEJORADO
 # ============================================
-col1, col2 = st.columns([5, 1])
 
-with col1:
-    question = st.chat_input("Escribe tu pregunta aquí...", key="chat_input")
-
-with col2:
-    st.write("")
-    st.write("")
-    if st.button("📤 Enviar", use_container_width=True):
-        if question:
-            # Forzar el envío
-            pass
+# Input field
+question = st.chat_input("Escribe tu pregunta aquí...", key="chat_input")
 
 # Procesar pregunta
 if question:
@@ -401,7 +523,7 @@ if question:
         # Mostrar respuesta
         display_message("assistant", response.answer, response.sources)
         
-        # Scroll automático al final
+        # Auto-scroll (rerun para actualizar)
         st.rerun()
         
     except Exception as e:
@@ -414,13 +536,19 @@ if question:
 
 
 # ============================================
-# FOOTER
+# FOOTER MEJORADO
 # ============================================
-st.markdown("---")
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.caption(f"⚡ Modelo: {settings.OLLAMA_MODEL}")
-with col2:
-    st.caption(f"📚 Chunks recuperados: {st.session_state.k_value}")
-with col3:
-    st.caption("💡 Powered by LangChain + FAISS + Ollama")
+st.markdown(f"""
+<div class="footer">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="color: #64748b; font-size: 0.9rem;">
+            <span style="margin-right: 1.5rem;">⚡ {settings.OLLAMA_MODEL}</span>
+            <span style="margin-right: 1.5rem;">📚 k={st.session_state.k_value}</span>
+            <span>💡 LangChain + FAISS + Ollama</span>
+        </div>
+        <div style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.5rem;">
+            v{settings.APP_VERSION}
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)

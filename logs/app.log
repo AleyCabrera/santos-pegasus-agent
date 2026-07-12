@@ -5607,3 +5607,702 @@ text
 2026-07-11 23:53:39 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: Explicame la arquitectura de microservicios...
 2026-07-11 23:53:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'Explicame la arquitectura de microservicios...' → 5 resultados
 2026-07-11 23:53:52 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 1612 caracteres
+2026-07-12 00:24:38 | INFO     | __main__:main - ============================================================
+2026-07-12 00:24:38 | INFO     | __main__:main - 📚 SISTEMA DE INDEXACIÓN - Santos Pegasus Soluciones
+2026-07-12 00:24:38 | INFO     | __main__:main - ============================================================
+2026-07-12 00:24:38 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:24:40 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 00:24:40 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 00:24:40 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-12 00:24:40 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-12 00:24:52 | INFO     | __main__:main - 🚀 Indexando documentos...
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories - 📂 Indexando documentos desde directorios
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories -    PDFs: data\pdfs
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories -    CSVs: data\csv
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories -    TXTs: data\pdfs
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories - 📄 Encontrados 0 PDFs
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories - 📝 Encontrados 0 archivos de texto
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories - 📊 Encontrados 2 CSVs
+2026-07-12 00:24:52 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-12 00:24:52 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-12 00:24:52 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories -    ✅ arquitectura_microservicios.csv: 7 filas
+2026-07-12 00:24:52 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-12 00:24:52 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-12 00:24:52 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories -    ✅ incidentes_protocolo.csv: 5 filas
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_directories - 📄 Total documentos cargados: 12
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - 🔧 Procesando 12 documentos con estrategia: recursive
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - 📝 Aplicando chunking a los documentos...
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - ✅ Generados 12 chunks
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents -    📏 Tamaño promedio: 171 caracteres
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents -    📐 Rango: 132 - 211 caracteres
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - 🧠 Generando embeddings...
+2026-07-12 00:24:52 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 12 textos (batch_size=32)
+2026-07-12 00:24:52 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-12 00:24:52 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 12 embeddings
+2026-07-12 00:24:52 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - ✅ Generados 12 embeddings
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents -    📏 Dimensión: 384
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - 💾 Agregando documentos al vector store...
+2026-07-12 00:24:52 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 12 documentos al vector store
+2026-07-12 00:24:52 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 12 documentos al índice
+2026-07-12 00:24:52 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 12
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - ✅ Agregados 12 documentos al vector store
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - 💾 Guardando vector store en disco...
+2026-07-12 00:24:52 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en vectorstore\faiss_index
+2026-07-12 00:24:52 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-12 00:24:52 | INFO     | app.services.indexing_service:index_documents - 🎉 Indexación completada exitosamente
+2026-07-12 00:26:24 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:26:27 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 00:26:27 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 00:26:27 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 00:26:27 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 00:26:27 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 00:26:27 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 00:26:27 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 00:26:27 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 00:26:27 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:26:28 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 00:26:28 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 00:26:28 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 00:26:28 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 00:26:28 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 00:26:47 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 00:26:47 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 00:26:47 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 00:26:47 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 00:26:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 00:26:52 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 327 caracteres
+2026-07-12 00:27:03 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:27:06 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 00:27:06 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 00:27:06 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 00:27:06 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 00:27:06 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 00:27:10 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 00:27:10 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 00:31:09 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:31:12 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-12 00:31:13 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:31:14 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 00:31:14 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 00:31:14 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 00:31:14 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 00:31:14 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 00:31:18 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 00:31:18 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 00:31:18 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 00:31:18 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 00:31:19 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 00:31:21 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:31:22 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 745 caracteres
+2026-07-12 00:31:23 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-12 00:32:24 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 00:32:27 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 00:32:27 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 00:32:27 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 00:32:27 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 00:32:27 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 00:32:31 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 00:32:31 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 00:32:31 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 00:33:02 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: Quiero que me explices en que consiste el Onboarding de la empres...
+2026-07-12 00:33:03 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'Quiero que me explices en que consiste el Onboardi...' → 5 resultados
+2026-07-12 00:33:10 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 398 caracteres
+2026-07-12 00:33:48 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: Explicame de como la empresa trabaja el frontend...
+2026-07-12 00:33:48 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'Explicame de como la empresa trabaja el frontend...' → 5 resultados
+2026-07-12 00:33:55 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 440 caracteres
+2026-07-12 00:37:13 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: quiero que me expliques la bienvenida institucional y cultura...
+2026-07-12 00:37:15 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'quiero que me expliques la bienvenida instituciona...' → 5 resultados
+2026-07-12 00:37:29 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 960 caracteres
+2026-07-12 08:33:00 | INFO     | __main__:main - ============================================================
+2026-07-12 08:33:00 | INFO     | __main__:main - 📚 SISTEMA DE INDEXACIÓN - Santos Pegasus Soluciones
+2026-07-12 08:33:00 | INFO     | __main__:main - ============================================================
+2026-07-12 08:33:00 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 08:33:03 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 08:33:03 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 08:33:03 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-12 08:33:03 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-12 08:33:17 | INFO     | __main__:main - 🔄 Re-indexando todos los documentos...
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:reindex - 🔄 Iniciando re-indexación completa...
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:reindex - 🧹 Limpiando vector store...
+2026-07-12 08:33:17 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-12 08:33:17 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-12 08:33:17 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:reindex - ✅ Vector store limpiado y recreado
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories - 📂 Indexando documentos desde directorios
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories -    PDFs: data\pdfs
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories -    CSVs: data\csv
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories -    TXTs: data\pdfs
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories - 📄 Encontrados 0 PDFs
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories - 📝 Encontrados 0 archivos de texto
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories - 📊 Encontrados 2 CSVs
+2026-07-12 08:33:17 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-12 08:33:17 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-12 08:33:17 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories -    ✅ arquitectura_microservicios.csv: 7 filas
+2026-07-12 08:33:17 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-12 08:33:17 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-12 08:33:17 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories -    ✅ incidentes_protocolo.csv: 5 filas
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_directories - 📄 Total documentos cargados: 12
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_documents - 🔧 Procesando 12 documentos con estrategia: recursive
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_documents - 📝 Aplicando chunking a los documentos...
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_documents - ✅ Generados 12 chunks
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_documents -    📏 Tamaño promedio: 171 caracteres
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_documents -    📐 Rango: 132 - 211 caracteres
+2026-07-12 08:33:17 | INFO     | app.services.indexing_service:index_documents - 🧠 Generando embeddings...
+2026-07-12 08:33:17 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 12 textos (batch_size=32)
+2026-07-12 08:33:18 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-12 08:33:18 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 12 embeddings
+2026-07-12 08:33:18 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-12 08:33:18 | INFO     | app.services.indexing_service:index_documents - ✅ Generados 12 embeddings
+2026-07-12 08:33:18 | INFO     | app.services.indexing_service:index_documents -    📏 Dimensión: 384
+2026-07-12 08:33:18 | INFO     | app.services.indexing_service:index_documents - 💾 Agregando documentos al vector store...
+2026-07-12 08:33:18 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 12 documentos al vector store
+2026-07-12 08:33:18 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 12 documentos al índice
+2026-07-12 08:33:18 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 12
+2026-07-12 08:33:18 | INFO     | app.services.indexing_service:index_documents - ✅ Agregados 12 documentos al vector store
+2026-07-12 08:33:18 | INFO     | app.services.indexing_service:index_documents - 💾 Guardando vector store en disco...
+2026-07-12 08:33:18 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en vectorstore\faiss_index
+2026-07-12 08:33:18 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-12 08:33:18 | INFO     | app.services.indexing_service:index_documents - 🎉 Indexación completada exitosamente
+2026-07-12 08:34:54 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 08:34:57 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 08:34:57 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 08:34:57 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 08:34:57 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 08:34:57 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 08:35:12 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 08:35:12 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 08:35:12 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 08:36:00 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: Que son los bienes institucionales...
+2026-07-12 08:36:21 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'Que son los bienes institucionales...' → 5 resultados
+2026-07-12 08:36:30 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 339 caracteres
+2026-07-12 09:17:06 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:17:09 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:17:09 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:17:09 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:17:09 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:17:09 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:17:09 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:17:09 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:17:09 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:17:09 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:17:10 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:17:10 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:17:10 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:17:10 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:17:10 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:17:31 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:17:31 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:17:31 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:17:31 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:17:31 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:17:37 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 445 caracteres
+2026-07-12 09:18:42 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:18:46 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:18:46 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:18:46 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:18:46 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:18:46 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:18:46 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:18:46 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:18:46 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:18:46 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:18:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:18:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:18:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:18:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:18:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:18:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:18:47 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:18:48 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:18:48 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:18:48 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:18:48 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:18:48 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:18:48 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:18:48 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:18:48 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:18:48 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:18:48 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:18:53 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:18:53 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:18:53 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:18:53 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:18:53 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:18:53 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:18:53 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:18:53 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:18:53 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:18:53 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:18:58 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 809 caracteres
+2026-07-12 09:19:01 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 703 caracteres
+2026-07-12 09:20:34 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:20:36 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:20:36 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:20:36 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:20:36 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:20:36 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:20:37 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:20:37 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:20:37 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:20:37 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:20:38 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:20:38 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:20:38 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:20:38 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:20:38 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:20:42 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:20:42 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:20:42 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:20:42 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:20:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:20:44 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 392 caracteres
+2026-07-12 09:21:19 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:19 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:22 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:22 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:22 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:22 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:21:22 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:21:22 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:22 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:24 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:24 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:24 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:24 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:24 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:24 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:24 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:24 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:24 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:24 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:28 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:21:28 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:21:28 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:21:28 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:21:28 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:21:29 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:21:29 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:21:29 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:21:29 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:21:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:21:31 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 427 caracteres
+2026-07-12 09:21:33 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 434 caracteres
+2026-07-12 09:21:36 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:39 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:39 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:39 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:39 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:39 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:21:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:21:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:21:39 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:40 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:41 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:41 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:41 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:41 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:41 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:41 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:42 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:42 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:42 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:42 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:42 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:21:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:21:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:21:42 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:43 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:43 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:43 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:43 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:43 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:43 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:21:43 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:21:43 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:21:43 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:44 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:44 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:44 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:44 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:44 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:45 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:45 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:45 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:45 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:45 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:45 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:21:45 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:21:45 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:21:45 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:21:45 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:21:48 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 523 caracteres
+2026-07-12 09:21:48 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:21:48 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:21:48 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:21:48 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:21:48 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:21:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:49 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:21:49 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:21:49 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:21:49 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:21:49 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:21:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:51 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:51 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:51 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:21:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:21:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:21:51 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:21:52 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 526 caracteres
+2026-07-12 09:21:52 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:21:52 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:21:52 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:21:52 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:21:52 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:21:53 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 342 caracteres
+2026-07-12 09:21:56 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:21:56 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:21:56 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:21:56 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:21:56 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:21:59 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 613 caracteres
+2026-07-12 09:22:31 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:22:32 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:22:33 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:22:33 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:22:33 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:22:33 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:22:33 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:22:33 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:22:33 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:22:33 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:22:33 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:22:34 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:22:34 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:22:34 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:22:34 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:22:34 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:22:34 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:22:35 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:22:35 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:22:35 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:22:35 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:22:35 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:22:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:22:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:22:38 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:22:38 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:22:38 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:22:39 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:22:39 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:22:39 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:22:39 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:22:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:22:41 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 377 caracteres
+2026-07-12 09:22:42 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 221 caracteres
+2026-07-12 09:23:43 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:23:46 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:23:46 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:23:46 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:23:46 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:23:46 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:23:46 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:23:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:23:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:23:47 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:23:48 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:23:48 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:23:48 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:23:48 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:23:48 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:23:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:23:51 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:23:52 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:23:52 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:23:52 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:23:52 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:23:52 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:23:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:23:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:23:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:23:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:23:53 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:23:53 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:23:53 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:23:53 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:23:53 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:23:54 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:23:54 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:23:54 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:23:54 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:23:54 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:23:54 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:23:54 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:23:54 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:23:54 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:23:55 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:23:55 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:23:55 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:23:55 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:23:55 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:23:56 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 184 caracteres
+2026-07-12 09:23:56 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:23:56 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:23:56 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:23:56 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:23:56 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:23:58 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:23:58 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:23:58 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:23:58 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:23:58 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:24:00 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 437 caracteres
+2026-07-12 09:24:01 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:24:01 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:24:01 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:24:01 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:24:01 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:24:02 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 132 caracteres
+2026-07-12 09:24:03 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:24:05 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:24:05 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:24:05 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:24:05 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:24:05 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:24:05 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:24:05 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:24:05 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:24:05 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:24:06 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:24:07 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:24:07 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:24:07 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:24:07 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:24:07 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:24:08 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:24:08 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:24:08 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:24:08 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:24:08 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:24:08 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:24:08 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:24:08 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:24:08 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:24:09 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:24:09 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:24:09 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:24:09 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-12 09:24:09 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:24:10 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:24:10 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:24:10 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:24:10 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:24:11 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:24:14 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 703 caracteres
+2026-07-12 09:24:15 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:24:15 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:24:15 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:24:15 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:24:15 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:24:19 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 810 caracteres
+2026-07-12 09:24:46 | INFO     | __main__:main - ============================================================
+2026-07-12 09:24:46 | INFO     | __main__:main - 📚 SISTEMA DE INDEXACIÓN - Santos Pegasus Soluciones
+2026-07-12 09:24:46 | INFO     | __main__:main - ============================================================
+2026-07-12 09:24:46 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:24:48 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:24:48 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:24:48 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-12 09:24:48 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-12 09:24:54 | INFO     | __main__:main - 🔄 Re-indexando todos los documentos...
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:reindex - 🔄 Iniciando re-indexación completa...
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:reindex - 🧹 Limpiando vector store...
+2026-07-12 09:24:54 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-12 09:24:54 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-12 09:24:54 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:reindex - ✅ Vector store limpiado y recreado
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories - 📂 Indexando documentos desde directorios
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    PDFs: data\pdfs
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    CSVs: data\csv
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    TXTs: data\pdfs
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    Markdown: data\pdfs
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories - 📄 Encontrados 0 PDFs
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -  Encontrados 5 Markdowns
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - Cargando Markdown: Arquitectura_Microservicios.md
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - ✅ Markdown cargado: 49996 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ Arquitectura_Microservicios.md: 1 documentos
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - Cargando Markdown: guia_backend.md
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - ✅ Markdown cargado: 30297 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ guia_backend.md: 1 documentos
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - Cargando Markdown: Guia_Frontend.md
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - ✅ Markdown cargado: 55615 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ Guia_Frontend.md: 1 documentos
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - Cargando Markdown: manual_onboarding.md
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - ✅ Markdown cargado: 52097 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ manual_onboarding.md: 1 documentos
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - Cargando Markdown: Protocolo_Incidentes.md
+2026-07-12 09:24:54 | INFO     | app.loaders.markdown_loader:load - ✅ Markdown cargado: 65559 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ Protocolo_Incidentes.md: 1 documentos
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories - 📝 Encontrados 0 archivos de texto
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories - 📊 Encontrados 2 CSVs
+2026-07-12 09:24:54 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-12 09:24:54 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-12 09:24:54 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ arquitectura_microservicios.csv: 7 filas
+2026-07-12 09:24:54 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-12 09:24:54 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-12 09:24:54 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories -    ✅ incidentes_protocolo.csv: 5 filas
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_directories - 📄 Total documentos cargados: 17
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_documents - 🔧 Procesando 17 documentos con estrategia: recursive
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_documents - 📝 Aplicando chunking a los documentos...
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_documents - ✅ Generados 610 chunks
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_documents -    📏 Tamaño promedio: 409 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_documents -    📐 Rango: 33 - 500 caracteres
+2026-07-12 09:24:54 | INFO     | app.services.indexing_service:index_documents - 🧠 Generando embeddings...
+2026-07-12 09:24:54 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 610 textos (batch_size=32)
+2026-07-12 09:24:55 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/20 completado
+2026-07-12 09:24:57 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 2/20 completado
+2026-07-12 09:24:58 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 3/20 completado
+2026-07-12 09:24:59 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 4/20 completado
+2026-07-12 09:25:00 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 5/20 completado
+2026-07-12 09:25:01 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 6/20 completado
+2026-07-12 09:25:02 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 7/20 completado
+2026-07-12 09:25:03 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 8/20 completado
+2026-07-12 09:25:04 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 9/20 completado
+2026-07-12 09:25:05 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 10/20 completado
+2026-07-12 09:25:06 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 11/20 completado
+2026-07-12 09:25:07 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 12/20 completado
+2026-07-12 09:25:08 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 13/20 completado
+2026-07-12 09:25:09 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 14/20 completado
+2026-07-12 09:25:11 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 15/20 completado
+2026-07-12 09:25:12 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 16/20 completado
+2026-07-12 09:25:13 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 17/20 completado
+2026-07-12 09:25:14 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 18/20 completado
+2026-07-12 09:25:15 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 19/20 completado
+2026-07-12 09:25:15 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 20/20 completado
+2026-07-12 09:25:15 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 610 embeddings
+2026-07-12 09:25:15 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-12 09:25:15 | INFO     | app.services.indexing_service:index_documents - ✅ Generados 610 embeddings
+2026-07-12 09:25:15 | INFO     | app.services.indexing_service:index_documents -    📏 Dimensión: 384
+2026-07-12 09:25:15 | INFO     | app.services.indexing_service:index_documents - 💾 Agregando documentos al vector store...
+2026-07-12 09:25:15 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 610 documentos al vector store
+2026-07-12 09:25:15 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 610 documentos al índice
+2026-07-12 09:25:15 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 610
+2026-07-12 09:25:15 | INFO     | app.services.indexing_service:index_documents - ✅ Agregados 610 documentos al vector store
+2026-07-12 09:25:15 | INFO     | app.services.indexing_service:index_documents - 💾 Guardando vector store en disco...
+2026-07-12 09:25:15 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en vectorstore\faiss_index
+2026-07-12 09:25:15 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-12 09:25:15 | INFO     | app.services.indexing_service:index_documents - 🎉 Indexación completada exitosamente
+2026-07-12 09:29:23 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:29:26 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:29:26 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:29:26 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:29:26 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 610 documentos
+2026-07-12 09:29:26 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:29:39 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:29:39 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:29:39 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:30:30 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: Quiero conocer la cultura de la empresa...
+2026-07-12 09:30:31 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'Quiero conocer la cultura de la empresa...' → 5 resultados
+2026-07-12 09:30:45 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 1245 caracteres
+2026-07-12 09:33:48 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: cuales son los valores de la empresa?...
+2026-07-12 09:33:49 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'cuales son los valores de la empresa?...' → 5 resultados
+2026-07-12 09:33:59 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 726 caracteres
+2026-07-12 09:35:06 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: como trabaja Santos Pegasus...
+2026-07-12 09:35:06 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'como trabaja Santos Pegasus...' → 5 resultados
+2026-07-12 09:35:15 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 325 caracteres
+2026-07-12 09:35:47 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: cual es la pila tecnologica...
+2026-07-12 09:35:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'cual es la pila tecnologica...' → 5 resultados
+2026-07-12 09:35:55 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 423 caracteres
+2026-07-12 09:41:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:41:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:41:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:41:51 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:41:51 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 610 documentos
+2026-07-12 09:41:51 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:41:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-12 09:41:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-12 09:41:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-12 09:41:51 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:41:53 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:41:53 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:41:53 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:41:53 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 610 documentos
+2026-07-12 09:41:53 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:42:10 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:42:10 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:42:10 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:42:10 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:42:10 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:42:16 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:42:18 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 521 caracteres
+2026-07-12 09:42:19 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:42:19 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:42:19 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:42:19 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 610 documentos
+2026-07-12 09:42:19 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:42:24 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:42:24 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:42:24 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:43:25 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: En que puedes ayudarme...
+2026-07-12 09:43:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'En que puedes ayudarme...' → 5 resultados
+2026-07-12 09:43:34 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 287 caracteres
+2026-07-12 09:47:11 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:47:11 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:47:13 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:47:14 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-12 09:47:15 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-12 09:47:16 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-12 09:47:16 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:47:18 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-12 09:47:19 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:47:19 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-12 09:47:21 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:47:21 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:47:21 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:47:21 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 610 documentos
+2026-07-12 09:47:21 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:47:21 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-12 09:47:21 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-12 09:47:21 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-12 09:47:21 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 610 documentos
+2026-07-12 09:47:21 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-12 09:47:25 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:47:25 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:47:25 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:47:25 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:47:26 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:47:26 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-12 09:47:26 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-12 09:47:26 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-12 09:47:26 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-12 09:47:27 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-12 09:47:29 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 299 caracteres
+2026-07-12 09:47:31 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 410 caracteres

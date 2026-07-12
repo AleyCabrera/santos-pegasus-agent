@@ -1,7 +1,7 @@
 """Servicio de indexación para el pipeline RAG"""
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-from app.loaders import PDFLoader, CSVLoader
+from app.loaders import PDFLoader, CSVLoader, MarkdownLoader
 from app.utils.text_processor import DocumentProcessor
 from app.embeddings.embedding_manager import EmbeddingManager
 from app.vector_store.faiss_store import FAISSVectorStore
@@ -91,13 +91,17 @@ class IndexingService:
         self.logger.info(f"   PDFs: {pdf_dir}")
         self.logger.info(f"   CSVs: {csv_dir}")
         self.logger.info(f"   TXTs: {txt_dir}")
+        self.logger.info(f"   Markdown: {pdf_dir}")
         
         documents = []
         
         # Cargar PDFs
         if pdf_dir and pdf_dir.exists():
             pdf_files = list(pdf_dir.glob("*.pdf"))
+            md_files = list(pdf_dir.glob("*.md"))
             self.logger.info(f"📄 Encontrados {len(pdf_files)} PDFs")
+            self.logger.info(f" Encontrados {len(md_files)} Markdowns")
+            
             
             for pdf_path in pdf_files:
                 try:
@@ -107,6 +111,16 @@ class IndexingService:
                     self.logger.info(f"   ✅ {pdf_path.name}: {len(docs)} páginas")
                 except Exception as e:
                     self.logger.error(f"   ❌ Error cargando {pdf_path.name}: {e}")
+        
+        # ✅ Procesar Markdowns
+        for md_path in md_files:
+            try:
+                loader = MarkdownLoader(md_path)
+                docs = loader.load()
+                documents.extend(docs)
+                self.logger.info(f"   ✅ {md_path.name}: {len(docs)} documentos")
+            except Exception as e:
+                self.logger.error(f"   ❌ Error cargando {md_path.name}: {e}")
         
         # Cargar archivos de texto (.txt)
         if txt_dir and txt_dir.exists():
