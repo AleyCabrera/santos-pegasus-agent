@@ -1,34 +1,80 @@
-# Core
-python-dotenv==1.0.1
-pydantic==2.9.2
-pydantic-settings==2.5.0
+# ============================================================
+# DEPENDENCIAS COMPATIBLES - SANTOS PEGASUS RAG AGENT
+# Verificado para Python 3.12.9
+# Última actualización: 2026-07-12
+# ============================================================
 
-# Document Processing
-PyPDF2==3.0.1
-pandas==3.0.3              # <--- CAMBIADO de 2.0.3 a 3.0.3
-markdown==3.7
+# ============================================================
+# CORE - Configuración y utilidades básicas
+# ============================================================
+python-dotenv==1.0.1              # Variables de entorno
+pydantic==2.10.4                  # Validación de datos
+pydantic-settings==2.7.1          # Configuración con Pydantic
 
-# AI/ML
-langchain==0.3.1
-langchain-community==0.3.1
-langchain-ollama==0.1.0
-sentence-transformers==2.2.2
-faiss-cpu==1.8.0
-transformers==4.45.2
-torch==2.4.0
+# ============================================================
+# PROCESAMIENTO DE DOCUMENTOS
+# ============================================================
+PyPDF2==3.0.1                     # Extracción de texto de PDFs
+pandas==2.2.3                     # Procesamiento de CSVs
+markdown==3.7                     # Procesamiento de Markdown
 
-# API & UI
-fastapi==0.115.0
-uvicorn[standard]==0.30.6
-streamlit==1.38.0
-httpx==0.27.2
+# ============================================================
+# AI/ML - Embeddings y Vector Store
+# ============================================================
+# NumPy y SciPy (dependencias base)
+numpy==1.26.4                     # Compatible con Python 3.12
+scipy==1.14.1                     # Compatible con Python 3.12
 
-# Testing & Quality
-pytest==8.3.3
-pytest-cov==5.0.0
-black==24.10.0
-flake8==7.1.1
-mypy==1.11.2
+# PyTorch (para sentence-transformers)
+torch==2.5.1                      # Última versión estable para Python 3.12
+torchvision==0.20.1               # Compatible con torch 2.5.1
 
-# Logging
-loguru==0.7.2
+# Vector Database
+faiss-cpu==1.9.0                  # Última versión, compatible con Python 3.12
+
+# Embeddings
+sentence-transformers==3.3.1      # Última versión estable
+transformers==4.47.1              # Compatible con sentence-transformers 3.3.1
+huggingface-hub==0.27.1           # Para descargar modelos
+tokenizers==0.21.0                # Tokenización rápida
+
+# ============================================================
+# LANGCHAIN - Orquestación del agente RAG
+# ============================================================
+langchain==0.3.14                 # Versión estable actual
+langchain-core==0.3.29            # Core de LangChain
+langchain-community==0.3.14       # Integraciones comunitarias
+langchain-text-splitters==0.3.5   # Divisores de texto
+langchain-ollama==0.2.2           # Integración con Ollama
+
+# ============================================================
+# API & UI - Backend y Frontend
+# ============================================================
+fastapi==0.115.6                  # Framework API moderno
+uvicorn[standard]==0.34.0         # Servidor ASGI
+streamlit==1.41.1                 # Frontend interactivo
+httpx==0.28.1                     # Cliente HTTP asíncrono
+python-multipart==0.0.20          # Para uploads de archivos
+
+# ============================================================
+# TESTING & QUALITY
+# ============================================================
+pytest==8.3.4                     # Framework de testing
+pytest-cov==6.0.0                 # Cobertura de código
+pytest-asyncio==0.25.0            # Tests asíncronos
+black==24.10.0                    # Formateador de código
+flake8==7.1.1                     # Linter
+mypy==1.14.1                      # Type checker
+isort==5.13.2                     # Ordenador de imports
+
+# ============================================================
+# LOGGING & UTILITIES
+# ============================================================
+loguru==0.7.3                     # Logging avanzado
+tqdm==4.67.1                      # Barras de progreso
+colorama==0.4.6                   # Colores en terminal
+
+# ============================================================
+# OPCIONAL - Para crear PDFs de prueba
+# ============================================================
+reportlab==4.2.5                  # Generación de PDFs (solo para tests)
