@@ -12,5 +12,6 @@ __all__ = [
     "prompts",
     "models",
     "services",
-    "api"
+    "api",
+    "ui"
 ]

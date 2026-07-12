@@ -5197,3 +5197,413 @@ text
 2026-07-11 22:10:59 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
 2026-07-11 22:10:59 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
 2026-07-11 22:10:59 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-11 23:17:08 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:13 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:13 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:13 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:17:13 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:17:13 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:17:14 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:17:14 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:17:14 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:17:14 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-11 23:17:14 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-11 23:17:14 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-11 23:17:14 | WARNING  | manual_test:test_pdf_loader - ⚠️ No se encontraron archivos PDF en data/pdfs/
+2026-07-11 23:17:14 | INFO     | manual_test:test_pdf_loader - 💡 Para probar, crea un PDF con el siguiente comando:
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-11 23:17:14 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-11 23:17:14 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-11 23:17:14 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-11 23:17:14 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-11 23:17:14 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-11 23:17:14 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-11 23:17:14 | INFO     | manual_test:test_with_existing_files - ⏭️  Archivo no encontrado: data/pdfs/manual_onboarding.pdf
+2026-07-11 23:17:14 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-11 23:17:14 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus?...
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 52 caracteres
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es algo que no existe?...
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 61 caracteres
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:17:14 | INFO     | app.agents.rag_agent:clear_history - 🧹 Historial de conversación limpiado
+2026-07-11 23:17:14 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:17:14 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-11 23:17:14 | WARNING  | test_chunking_manual:test_chunking - ⚠️ No hay PDFs en data/pdfs/
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-11 23:17:14 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 12
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 171 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 132 - 211 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway | Descripcion: Punto de entrada único para todas las API | Base_Datos: Redis | Comunicacion: HTTP/REST | Dependencias: Todos los servicios
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 160}
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 171 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 132 - 211 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway | Descripcion: Punto de entrada único para todas las API | Base_Datos: Redis | Comunicacion: HTTP/REST | Dependencias: Todos los servicios
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 160}
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 171 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 132 - 211 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway | Descripcion: Punto de entrada único para todas las API | Base_Datos: Redis | Comunicacion: HTTP/REST | Dependencias: Todos los servicios
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 160}
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 12
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 171 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 132 - 211 caracteres
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    Servicio: API Gateway | Descripcion: Punto de entrada único para todas las API | Base_Datos: Redis | Comunicacion: HTTP/REST | Dependencias: Todos los servicios
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\csv\\arquitectura_microservicios.csv', 'filename': 'arquitectura_microservicios.csv', 'row_index': 0, 'total_rows': 7, 'columns': ['Servicio', 'Descripcion', 'Base_Datos', 'Comunicacion', 'Dependencias'], 'type': 'csv', 'file_size': 605, 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 160}
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+============================================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 📊 COMPARACIÓN DE ESTRATEGIAS
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - Estrategia   Chunks     Promedio     Rango               
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - ------------------------------------------------------------
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - recursive    12         171          132-211
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - sentence     12         171          132-211
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - character    12         171          132-211
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - overlap      12         171          132-211
+2026-07-11 23:17:14 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-11 23:17:14 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:15 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:15 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:15 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:17 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:17 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:17 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-11 23:17:18 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:19 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:19 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:19 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:21 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:21 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:21 | WARNING  | app.embeddings.embedding_manager:get_embedding - Texto vacío, retornando embedding zero
+2026-07-11 23:17:21 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:22 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:22 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:22 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:23 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:23 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:23 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:23 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:23 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:25 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:25 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:25 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-11 23:17:25 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-11 23:17:25 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-11 23:17:25 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-11 23:17:25 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 1 resultados
+2026-07-11 23:17:26 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'gatos...' → 1 resultados
+2026-07-11 23:17:26 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-13\test_save_and_load0
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-13\test_save_and_load0
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 3 documentos
+2026-07-11 23:17:28 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:17:28 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-11 23:17:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 0 resultados
+2026-07-11 23:17:29 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:30 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:30 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:30 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:30 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:30 | WARNING  | app.vector_store.faiss_store:search - Vector store vacío
+2026-07-11 23:17:30 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:17:32 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:17:32 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-11 23:17:32 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-11 23:17:32 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-11 23:17:32 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-11 23:17:32 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-11 23:17:32 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-11 23:17:32 | WARNING  | test_loaders_integration:test_load_pdf_documents - No hay PDFs para probar, saltando test
+2026-07-11 23:17:32 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-11 23:17:32 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-11 23:17:32 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-11 23:17:32 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-11 23:17:32 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-11 23:17:32 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-11 23:17:32 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-11 23:17:32 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-11 23:17:32 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-11 23:17:32 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-11 23:17:32 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-11 23:17:32 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-11 23:20:13 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:20:15 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:20:15 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:20:15 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:20:15 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:20:15 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:20:29 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:20:29 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:20:43 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: que herramientas uasn...
+2026-07-11 23:20:44 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'que herramientas uasn...' → 5 resultados
+2026-07-11 23:20:51 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 348 caracteres
+2026-07-11 23:21:07 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: eres genial...
+2026-07-11 23:21:07 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'eres genial...' → 0 resultados
+2026-07-11 23:21:13 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 740 caracteres
+2026-07-11 23:27:10 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:27:12 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:27:12 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:27:12 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:27:12 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:27:12 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:27:12 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:27:12 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:27:12 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:28:26 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:28:26 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:28:26 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:28:29 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:28:29 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:28:29 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:28:29 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:28:29 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:28:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:28:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:28:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:28:30 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:28:30 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:28:30 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:28:30 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:28:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:28:59 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:29:01 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:29:01 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:29:01 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:29:01 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:29:01 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:29:01 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:29:01 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:29:01 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:29:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:29:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:29:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:29:51 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:29:51 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:29:51 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:29:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:29:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:29:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:29:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:29:53 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:29:53 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:29:53 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:29:53 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:29:53 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:30:09 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:30:09 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:30:09 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:30:09 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-11 23:30:09 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-11 23:30:16 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 804 caracteres
+2026-07-11 23:40:03 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:40:05 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:40:05 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:40:05 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:40:05 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:40:05 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:40:06 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:40:06 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:40:06 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:40:06 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:40:07 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:40:07 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:40:07 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:40:07 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:40:07 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:40:21 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:40:21 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:40:21 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:40:21 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-11 23:40:21 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-11 23:40:26 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 381 caracteres
+2026-07-11 23:41:20 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:41:23 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:41:23 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:41:23 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:41:23 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:41:23 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:41:23 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-11 23:41:24 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-11 23:41:24 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-11 23:41:24 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:41:25 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:41:25 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:41:25 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:41:25 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:41:25 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:41:29 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:41:29 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:41:29 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:41:29 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-11 23:41:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-11 23:41:32 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 339 caracteres
+2026-07-11 23:50:41 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:50:43 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:50:43 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:50:43 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:50:43 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:50:43 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:50:56 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:50:56 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:50:56 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:51:57 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-11 23:52:00 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-11 23:52:00 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-11 23:52:00 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vectorstore\faiss_index
+2026-07-11 23:52:00 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 12 documentos
+2026-07-11 23:52:00 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-11 23:52:06 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-11 23:52:06 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con modelo: llama3.2:3b
+2026-07-11 23:52:06 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-11 23:52:30 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: En que puedes ayudarme?...
+2026-07-11 23:52:31 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'En que puedes ayudarme?...' → 5 resultados
+2026-07-11 23:52:39 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 587 caracteres
+2026-07-11 23:53:39 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: Explicame la arquitectura de microservicios...
+2026-07-11 23:53:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'Explicame la arquitectura de microservicios...' → 5 resultados
+2026-07-11 23:53:52 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 1612 caracteres
