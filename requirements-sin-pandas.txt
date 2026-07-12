@@ -10,7 +10,7 @@ markdown==3.7
 # AI/ML - Versiones compatibles con Python 3.13
 langchain==0.3.1           # O la última compatible
 langchain-community==0.3.1
-langchain-ollama==0.1.0
+langchain-ollama==0.2.0
 sentence-transformers==2.2.2
 faiss-cpu==1.8.0
 transformers==4.45.2
