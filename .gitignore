@@ -1,9 +1,40 @@
-echo "__pycache__/" > .gitignore
-echo "*.pyc" >> .gitignore
-echo ".env" >> .gitignore
-echo ".venv/" >> .gitignore
-echo "*.log" >> .gitignore
-echo "vectorstore/" >> .gitignore
-echo ".DS_Store" >> .gitignore
-echo ".vscode/" >> .gitignore
-echo ".idea/" >> .gitignore
+cat << 'EOF' > .gitignore
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# Variables de entorno
+.env
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+
+# Configuración de IDEs y SO
+.vscode/
+.idea/
+.DS_Store
+
+# Build y distribución
+build/
+dist/
+*.egg-info/
+
+# Específico del proyecto
+vectorstore/
+
+# Scripts específicos (revisar si deben ignorarse)
+dependencies.sh
+verify_installation.py
+EOF
