@@ -37,4 +37,7 @@ vectorstore/
 # Scripts específicos (revisar si deben ignorarse)
 dependencies.sh
 verify_installation.py
+
+# Docker volumes (si los tienes fuera de .gitignore)
+ollama_data/
 EOF
