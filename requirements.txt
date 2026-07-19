@@ -46,6 +46,8 @@ langchain-core==0.3.29            # Core de LangChain
 langchain-community==0.3.14       # Integraciones comunitarias
 langchain-text-splitters==0.3.5   # Divisores de texto
 langchain-ollama==0.2.2           # Integración con Ollama
+langchain-huggingface==0.1.2      # Integración con HuggingFace
+langchain-groq==0.2.1             # Integración con Groq
 
 # ============================================================
 # API & UI - Backend y Frontend

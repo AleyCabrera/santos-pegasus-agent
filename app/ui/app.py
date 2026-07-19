@@ -372,9 +372,15 @@ with st.sidebar:
     
     # Modelo
     st.markdown("**🧠 Modelo LLM**")
-    st.code(settings.OLLAMA_MODEL, language="bash")
-    st.caption(f"Host: {settings.OLLAMA_HOST}")
-    
+    if settings.LLM_PROVIDER == "huggingface":
+        st.code(settings.HF_MODEL, language="bash")
+        st.caption("Proveedor: Hugging Face Inference API")
+    elif settings.LLM_PROVIDER == "groq":
+        st.code(settings.GROQ_MODEL, language="bash")
+        st.caption("Proveedor: Groq Cloud")
+    else:
+        st.warning("Proveedor de LLM no reconocido")
+
     # Parámetros
     st.markdown("**📊 Parámetros de búsqueda**")
     st.session_state.k_value = st.slider(
@@ -466,11 +472,10 @@ st.markdown("""
 if st.session_state.chat_service is None:
     st.error("""
     ❌ **No se pudo conectar con el servicio de chat.**
-    
     Verifica que:
-    1. Ollama esté ejecutándose (`ollama serve`)
-    2. El modelo esté descargado (`ollama pull llama3.2:3b`)
-    3. La configuración en `.env` sea correcta
+    1. Las variables de entorno (Secrets) estén configuradas correctamente en Streamlit Cloud.
+    2. El token de API (HF_TOKEN o GROQ_API_KEY) sea válido y tenga permisos.
+    3. Si estás ejecutando localmente con Ollama, que esté corriendo (`ollama serve`).
     """)
     st.stop()
 

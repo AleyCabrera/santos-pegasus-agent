@@ -10,6 +10,17 @@ load_dotenv()
 class Settings(BaseSettings):
     """Configuración centralizada de la aplicación"""
     
+    # --- NUEVO: Configuración del Proveedor de LLM ---
+    LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "huggingface") # "huggingface", "groq" o "ollama"
+    
+    # Hugging Face
+    HF_TOKEN: str = os.getenv("HF_TOKEN", "")
+    HF_MODEL: str = os.getenv("HF_MODEL", "mistralai/Mistral-7B-Instruct-v0.2")
+    
+    # Groq (Alternativa ultra-rápida y gratuita)
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
+    GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama3-8b-8192")
+    
     # Model Configuration
     OLLAMA_HOST: str = os.getenv("OLLAMA_HOST", "http://localhost:11434")
     OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "llama3.2:3b")
@@ -20,7 +31,7 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
     
     # Vector Store
-    VECTOR_STORE_PATH: Path = Path(os.getenv("VECTOR_STORE_PATH", "./vectorstore/faiss_index"))
+    VECTOR_STORE_PATH: Path = Path(os.getenv("VECTOR_STORE_PATH", "./vector_store/faiss_index"))
     CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "500"))
     CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "50"))
     SIMILARITY_THRESHOLD: float = float(os.getenv("SIMILARITY_THRESHOLD", "0.3"))

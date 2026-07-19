@@ -310,8 +310,9 @@ Accesos Docker:
 ## **📸 Capturas de Pantalla**
 
 **Interfaz Principal**
+https://github.com/AleyCabrera/santos-pegasus-agent/blob/112c1d21f0598f675802c0a2b55ce71a6b40b44d/screenshots/img_1.png
 ```
-![Descripción de la imagen]([screenshots/img_1.png](https://github.com/AleyCabrera/santos-pegasus-agent/blob/112c1d21f0598f675802c0a2b55ce71a6b40b44d/screenshots/img_1.png))
+https://github.com/AleyCabrera/santos-pegasus-agent/blob/112c1d21f0598f675802c0a2b55ce71a6b40b44d/screenshots/img_1.png
 ```
 **Respuesta con Fuentes**
 ```
