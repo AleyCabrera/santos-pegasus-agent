@@ -26,8 +26,8 @@ numpy==1.26.4                     # Compatible con Python 3.12
 scipy==1.14.1                     # Compatible con Python 3.12
 
 # PyTorch (para sentence-transformers)
-torch==2.5.1                      # Última versión estable para Python 3.12
-torchvision==0.20.1               # Compatible con torch 2.5.1
+# torch==2.5.1                      # Última versión estable para Python 3.12
+# torchvision==0.20.1               # Compatible con torch 2.5.1
 
 # Vector Database
 faiss-cpu==1.9.0                  # Última versión, compatible con Python 3.12
