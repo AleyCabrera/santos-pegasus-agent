@@ -1,15 +1,15 @@
-"""Interfaz de usuario con Streamlit para el agente RAG - Versión Mejorada"""
+"""Interfaz de usuario con Streamlit para el agente RAG - Versión Mejorada y Corregida"""
 
 import streamlit as st
 import sys
 from pathlib import Path
-import time
 
 # ============================================
 # CONFIGURACIÓN DE IMPORTACIONES
 # ============================================
-project_root = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(project_root))
+project_root = Path(__file__).resolve().parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
 
 from app.services.chat_service import ChatService
 from app.services.indexing_service import IndexingService
@@ -35,10 +35,8 @@ st.set_page_config(
 # ============================================
 st.markdown("""
 <style>
-    /* Importar fuente moderna */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
-    /* Variables de color */
     :root {
         --primary-color: #667eea;
         --secondary-color: #764ba2;
@@ -51,12 +49,8 @@ st.markdown("""
         --error-color: #ef4444;
     }
     
-    /* Reset y base */
-    * {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+    * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
     
-    /* Header principal mejorado */
     .main-header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 2rem;
@@ -84,7 +78,6 @@ st.markdown("""
         font-weight: 400;
     }
     
-    /* Mensajes del chat mejorados */
     .user-message {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
@@ -125,7 +118,6 @@ st.markdown("""
         to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Badges de fuentes mejorados */
     .source-badge {
         background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
         color: #4f46e5;
@@ -144,7 +136,6 @@ st.markdown("""
         box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
     }
     
-    /* Sidebar mejorado */
     .sidebar-header {
         font-size: 1.1rem;
         font-weight: 600;
@@ -176,7 +167,6 @@ st.markdown("""
         font-weight: 600;
     }
     
-    /* Input mejorado */
     .stTextInput > div > div > input {
         border-radius: 12px;
         border: 2px solid #e2e8f0;
@@ -190,7 +180,6 @@ st.markdown("""
         box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
     }
     
-    /* Botones mejorados */
     .stButton > button {
         border-radius: 12px;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -208,11 +197,6 @@ st.markdown("""
         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
     
-    .stButton > button:active {
-        transform: translateY(0);
-    }
-    
-    /* Contenedor de chat scrollable */
     .chat-container {
         background: #f8fafc;
         border-radius: 16px;
@@ -221,7 +205,6 @@ st.markdown("""
         border: 1px solid #e2e8f0;
     }
     
-    /* Footer mejorado */
     .footer {
         background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         padding: 1.5rem;
@@ -230,45 +213,22 @@ st.markdown("""
         border: 1px solid #e2e8f0;
     }
     
-    /* Alertas mejoradas */
     .stAlert {
         border-radius: 12px;
         border: none;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     
-    /* Responsive */
     @media (max-width: 768px) {
-        .user-message, .assistant-message {
-            max-width: 95%;
-        }
-        .main-header h1 {
-            font-size: 1.8rem;
-        }
-        .main-header {
-            padding: 1.5rem;
-        }
+        .user-message, .assistant-message { max-width: 95%; }
+        .main-header h1 { font-size: 1.8rem; }
+        .main-header { padding: 1.5rem; }
     }
     
-    /* Scrollbar personalizado */
-    ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-        border-radius: 4px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 4px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-    }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -312,7 +272,6 @@ def display_message(role: str, content: str, sources: list = None):
         </div>
         ''', unsafe_allow_html=True)
         
-        # Mostrar fuentes si existen
         if sources:
             st.markdown("**📚 Fuentes consultadas:**")
             sources_html = ""
@@ -330,7 +289,7 @@ def get_welcome_message():
 
     Puedo ayudarte con preguntas sobre:
     - 📋 **Onboarding** - Manual de incorporación
-    -  **Backend** - Guías de ingeniería
+    - ⚙️ **Backend** - Guías de ingeniería
     - 🎨 **Frontend** - Estándares de desarrollo
     - 🚨 **Incidentes** - Protocolos de respuesta
     - 🏗️ **Arquitectura** - Microservicios
@@ -359,7 +318,6 @@ if "k_value" not in st.session_state:
 # SIDEBAR - CONFIGURACIÓN MEJORADA
 # ============================================
 with st.sidebar:
-    # Logo y título
     st.markdown("""
     <div style="text-align: center; margin-bottom: 2rem;">
         <div style="font-size: 3rem; margin-bottom: 0.5rem;">🤖</div>
@@ -368,23 +326,27 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
     
-    st.markdown('<div class="sidebar-header">️ Configuración</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-header">⚙️ Configuración</div>', unsafe_allow_html=True)
     
-    # Modelo
+    # Modelo dinámico
     st.markdown("**🧠 Modelo LLM**")
-    llm_provider = getattr(settings, 'LLM_PROVIDER', 'ollama').lower()  # ← Forzar minúsculas
+    llm_provider = getattr(settings, 'LLM_PROVIDER', 'ollama').lower()
 
     if llm_provider == "ollama":
-        st.code(getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b'), language="bash")
+        model_name = getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b')
+        st.code(model_name, language="bash")
         st.caption("Proveedor: Ollama (Local)")
     elif llm_provider == "huggingface":
-        st.code(getattr(settings, 'HF_MODEL', 'mistralai/Mistral-7B-Instruct-v0.2'), language="bash")
+        model_name = getattr(settings, 'HF_MODEL', 'mistralai/Mistral-7B-Instruct-v0.2')
+        st.code(model_name, language="bash")
         st.caption("Proveedor: Hugging Face")
     elif llm_provider == "groq":
-        st.code(getattr(settings, 'GROQ_MODEL', 'llama3-8b-8192'), language="bash")
+        model_name = getattr(settings, 'GROQ_MODEL', 'llama3-8b-8192')
+        st.code(model_name, language="bash")
         st.caption("Proveedor: Groq Cloud")
     else:
-        st.code(getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b'), language="bash")
+        model_name = getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b')
+        st.code(model_name, language="bash")
         st.caption(f"Proveedor: {llm_provider.title()} (Default: Ollama)")
 
     # Parámetros
@@ -399,9 +361,9 @@ with st.sidebar:
     
     col1, col2 = st.columns(2)
     with col1:
-        st.caption(f"️ Temp: {settings.OLLAMA_TEMPERATURE}")
+        st.caption(f"🌡️ Temp: {getattr(settings, 'OLLAMA_TEMPERATURE', 0.7)}")
     with col2:
-        st.caption(f"📏 Contexto: {settings.OLLAMA_CONTEXT_WINDOW}")
+        st.caption(f"📏 Contexto: {getattr(settings, 'OLLAMA_CONTEXT_WINDOW', 2048)}")
     
     # Estadísticas
     st.markdown("---")
@@ -410,23 +372,14 @@ with st.sidebar:
     if st.session_state.chat_service:
         try:
             stats = st.session_state.chat_service.get_stats()
-            
             st.markdown(f"""
-            <div class="stats-card">
-                📚 <b>Documentos:</b> {stats.get('documents_in_store', 0)}
-            </div>
-            <div class="stats-card">
-                💬 <b>Mensajes:</b> {stats.get('history_length', 0)}
-            </div>
-            <div class="stats-card">
-                🤖 <b>Modelo:</b> {stats.get('model', 'N/A')[:20]}
-            </div>
-            <div class="stats-card">
-                 <b>Embeddings:</b> {stats.get('embedding_model', 'N/A')[:20]}
-            </div>
+            <div class="stats-card">📚 <b>Documentos:</b> {stats.get('documents_in_store', 0)}</div>
+            <div class="stats-card">💬 <b>Mensajes:</b> {stats.get('history_length', 0)}</div>
+            <div class="stats-card">🤖 <b>Modelo:</b> {stats.get('model', 'N/A')[:20]}</div>
+            <div class="stats-card">🧠 <b>Embeddings:</b> {stats.get('embedding_model', 'N/A')[:20]}</div>
             """, unsafe_allow_html=True)
-        except Exception as e:
-            st.warning(f"No se pudieron obtener estadísticas")
+        except Exception:
+            st.warning("No se pudieron obtener estadísticas")
     
     # Acciones
     st.markdown("---")
@@ -434,7 +387,7 @@ with st.sidebar:
     
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("🧹 Limpiar", use_container_width=True, help="Limpiar historial de conversación"):
+        if st.button("🧹 Limpiar", use_container_width=True, help="Limpiar historial"):
             if st.session_state.chat_service:
                 st.session_state.chat_service.clear_history()
                 st.session_state.messages = [
@@ -444,7 +397,7 @@ with st.sidebar:
                 st.rerun()
     
     with col2:
-        if st.button("🔄 Re-indexar", use_container_width=True, help="Re-indexar todos los documentos"):
+        if st.button("🔄 Re-indexar", use_container_width=True, help="Re-indexar documentos"):
             try:
                 with st.spinner("Re-indexando..."):
                     indexer = get_indexing_service()
@@ -454,19 +407,20 @@ with st.sidebar:
             except Exception as e:
                 st.error(f"Error: {e}")
     
-    # Información
+    # Información dinámica
     st.markdown("---")
     st.markdown('<div class="sidebar-header">ℹ️ Información</div>', unsafe_allow_html=True)
     st.caption(f"📌 Versión: {settings.APP_VERSION}")
     st.caption("🔒 100% Open Source")
-    st.caption("🤖 Ollama Local")
+    
+    provider_display = "Ollama Local" if llm_provider == "ollama" else f"{llm_provider.title()} Cloud"
+    st.caption(f"🤖 {provider_display}")
 
 
 # ============================================
 # CONTENIDO PRINCIPAL
 # ============================================
 
-# Header
 st.markdown("""
 <div class="main-header">
     <h1>🤖 Santos Pegasus - Agente IA RAG</h1>
@@ -490,10 +444,8 @@ if st.session_state.chat_service is None:
 # CHAT MEJORADO
 # ============================================
 
-# Contenedor de chat
 st.markdown('<div class="chat-container">', unsafe_allow_html=True)
 
-# Mostrar mensajes
 for msg in st.session_state.messages:
     display_message(msg["role"], msg["content"], msg.get("sources"))
 
@@ -501,21 +453,17 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 
 # ============================================
-# INPUT DE PREGUNTAS MEJORADO
+# INPUT DE PREGUNTAS
 # ============================================
 
-# Input field
 question = st.chat_input("Escribe tu pregunta aquí...", key="chat_input")
 
-# Procesar pregunta
 if question:
-    # Agregar mensaje del usuario
+    # 1. Agregar y mostrar mensaje del usuario
     st.session_state.messages.append({"role": "user", "content": question})
-    
-    # Mostrar mensaje del usuario
     display_message("user", question)
     
-    # Generar respuesta
+    # 2. Generar respuesta
     try:
         with st.spinner("🤔 Pensando..."):
             response = st.session_state.chat_service.ask(
@@ -524,18 +472,16 @@ if question:
                 include_history=True
             )
         
-        # Agregar respuesta al historial
+        # 3. Agregar y mostrar respuesta del asistente
         st.session_state.messages.append({
             "role": "assistant",
             "content": response.answer,
             "sources": response.sources
         })
-        
-        # Mostrar respuesta
         display_message("assistant", response.answer, response.sources)
         
-        # Auto-scroll (rerun para actualizar)
-        st.rerun()
+        # Nota: st.rerun() se eliminó porque Streamlit ya rerunea automáticamente 
+        # después de st.chat_input, y llamamos a display_message manualmente arriba.
         
     except Exception as e:
         st.error(f"❌ Error generando respuesta: {e}")
@@ -544,6 +490,7 @@ if question:
             "content": f"Lo siento, ocurrió un error: {str(e)}",
             "sources": []
         })
+        display_message("assistant", f"Lo siento, ocurrió un error: {str(e)}", [])
 
 
 # ============================================
@@ -553,9 +500,9 @@ st.markdown(f"""
 <div class="footer">
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
         <div style="color: #64748b; font-size: 0.9rem;">
-            <span style="margin-right: 1.5rem;">⚡ {settings.OLLAMA_MODEL}</span>
+            <span style="margin-right: 1.5rem;">⚡ {model_name}</span>
             <span style="margin-right: 1.5rem;">📚 k={st.session_state.k_value}</span>
-            <span>💡 LangChain + FAISS + Ollama</span>
+            <span>💡 LangChain + FAISS + {llm_provider.title()}</span>
         </div>
         <div style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.5rem;">
             v{settings.APP_VERSION}
