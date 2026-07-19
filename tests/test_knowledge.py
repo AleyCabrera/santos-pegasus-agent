@@ -1,20 +1,18 @@
-"""Script para probar el conocimiento de la documentación"""
+"""Script para probar el conocimiento de la documentación (Automatizado para pytest)"""
 import sys
 from pathlib import Path
 
 # AGREGAR LA RAÍZ DEL PROYECTO AL PATH
-# Esto permite que Python encuentre el módulo 'app'
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-# Ahora sí podemos importar los módulos del proyecto
 from app.agents.rag_agent import RAGAgent
 from app.services.chat_service import ChatService
 
 
 def test_knowledge():
-    """Prueba preguntas específicas sobre la documentación"""
+    """Prueba preguntas específicas sobre la documentación de forma automática"""
     
-    print("🧪 PROBANDO CONOCIMIENTO DE LA DOCUMENTACIÓN")
+    print("\n🧪 PROBANDO CONOCIMIENTO DE LA DOCUMENTACIÓN (Modo Automático)")
     print("="*60)
     
     # Crear agente
@@ -33,75 +31,39 @@ def test_knowledge():
     
     if stats['documents_in_store'] == 0:
         print("\n⚠️ No hay documentos indexados.")
-        print("💡 Ejecuta: python index_documents.py")
-        print("   Luego selecciona opción 1: Indexar documentos")
+        print("💡 Ejecuta: python index_auto.py")
         return
     
-    # Preguntas sobre cada documento
+    # Preguntas sobre cada documento (Ejecutamos solo 3 para que el test sea rápido)
     questions = [
-        # Manual de Onboarding
         "¿Cuáles son los valores de Santo Pegasus?",
-        "¿Cómo es la estructura organizacional?",
-        "¿Qué herramientas de comunicación usan?",
-        "¿Cuántos días de vacaciones tienen los empleados?",
-        
-        # Guía Back-end
         "¿Qué principios SOLID aplican en el back-end?",
-        "¿Cómo se manejan las credenciales en el código?",
-        "¿Qué framework usan para pruebas unitarias?",
-        "¿Cuál es la cobertura mínima de pruebas?",
-        
-        # Guía Front-end
-        "¿Qué stack tecnológico usan en front-end?",
-        "¿Cómo gestionan el estado global?",
-        "¿Qué es Atomic Design?",
-        "¿Cómo manejan la seguridad en front-end?",
-        
-        # Protocolo de Incidentes
-        "¿Qué es un incidente SEV-1?",
-        "¿Cómo se gestiona un incidente crítico?",
-        "¿Qué es el Error Budget?",
-        "¿Qué es un Post-Mortem?",
-        
-        # Arquitectura de Microservicios
-        "¿Cuáles son los microservicios principales?",
-        "¿Cómo se comunican los servicios?",
-        "¿Qué bases de datos usan?",
-        "¿Qué es el API Gateway?"
+        "¿Qué es un incidente SEV-1?"
     ]
     
-    print(f"\n📝 Se harán {len(questions)} preguntas de prueba.")
-    print("   (Se ejecutarán las primeras 5 para no saturar)")
-    input("\nPresiona Enter para comenzar...")
+    print(f"\n📝 Ejecutando {len(questions)} preguntas de prueba automáticas...\n")
     
-    for i, question in enumerate(questions[:5], 1):  # Solo 5 para no saturar
-        print(f"\n{'='*60}")
+    for i, question in enumerate(questions, 1):
         print(f"❓ Pregunta {i}: {question}")
-        print(f"{'='*60}")
-        
-        print("🤔 Generando respuesta...")
         try:
             result = agent.ask(question)
             
-            print(f"\n RESPUESTA:")
-            print("-" * 50)
-            print(result['answer'])
-            print("-" * 50)
+            # Verificación básica: que haya respuesta y no sea un error
+            assert 'answer' in result, "La respuesta no contiene la clave 'answer'"
+            assert len(result['answer']) > 10, "La respuesta es demasiado corta"
+            
+            print(f"   ✅ Respuesta generada ({len(result['answer'])} caracteres)")
             
             if result['sources']:
-                print(f"\n📚 Fuentes: {', '.join(result['sources'])}")
+                print(f"   📚 Fuentes: {', '.join(result['sources'])}")
             
-            if result['context_used']:
-                print(f"📄 Contexto usado: {result['context_length']} caracteres")
-            else:
-                print("⚠️ No se usó contexto")
         except Exception as e:
-            print(f"\n❌ Error generando respuesta: {e}")
-        
-        if i < 5:
-            input("\n⏭️ Presiona Enter para continuar...")
-    
-    print("\n✅ Prueba completada!")
+            print(f"   ❌ Error generando respuesta: {e}")
+            raise  # Esto hará que pytest marque el test como fallido si hay un error real
+            
+    print("\n" + "="*60)
+    print("✅ ¡Prueba de conocimiento completada exitosamente!")
+    print("="*60 + "\n")
 
 
 if __name__ == "__main__":

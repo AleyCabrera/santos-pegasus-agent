@@ -11,6 +11,23 @@ from app.embeddings.embedding_manager import EmbeddingManager
 from app.prompts.prompt_templates import rag_prompt, no_context_prompt
 from app.utils.logger import logger
 
+# ==========================================
+# IMPORTACIONES DE LLMs A NIVEL DE MÓDULO
+# (Necesario para que los tests puedan hacer mock)
+# ==========================================
+from langchain_ollama import ChatOllama
+
+try:
+    from langchain_huggingface import HuggingFaceEndpoint
+except ImportError:
+    HuggingFaceEndpoint = None
+
+try:
+    from langchain_groq import ChatGroq
+except ImportError:
+    ChatGroq = None
+
+
 @dataclass
 class ChatMessage:
     """Representa un mensaje en la conversación"""
@@ -18,6 +35,7 @@ class ChatMessage:
     content: str
     timestamp: str = ""
     metadata: Optional[Dict[str, Any]] = None
+
 
 class RAGAgent:
     """Agente RAG con LangChain y proveedores configurables"""
@@ -54,8 +72,7 @@ class RAGAgent:
         try:
             provider = settings.LLM_PROVIDER.lower()
             
-            if provider == "huggingface":
-                from langchain_huggingface import HuggingFaceEndpoint
+            if provider == "huggingface" and HuggingFaceEndpoint:
                 self.logger.info(f"🔗 Configurando LLM: Hugging Face ({settings.HF_MODEL})")
                 self.llm = HuggingFaceEndpoint(
                     repo_id=settings.HF_MODEL,
@@ -63,16 +80,14 @@ class RAGAgent:
                     temperature=self.temperature,
                     max_new_tokens=512,
                 )
-            elif provider == "groq":
-                from langchain_groq import ChatGroq
+            elif provider == "groq" and ChatGroq:
                 self.logger.info(f"🔗 Configurando LLM: Groq ({settings.GROQ_MODEL})")
                 self.llm = ChatGroq(
                     model=settings.GROQ_MODEL,
                     groq_api_key=settings.GROQ_API_KEY,
                     temperature=self.temperature,
                 )
-            else: # Default a Ollama para desarrollo local
-                from langchain_ollama import ChatOllama
+            else: # Default a Ollama para desarrollo local y tests
                 self.logger.info(f"🔗 Configurando LLM: Ollama ({self.model_name})")
                 self.llm = ChatOllama(
                     model=self.model_name,
@@ -90,11 +105,7 @@ class RAGAgent:
             raise
 
     def _test_connection(self):
-        """Prueba la conexión con Ollama (solo si se usa Ollama)"""
-        if settings.LLM_PROVIDER.lower() != "ollama":
-            self.logger.info("✅ LLM en la nube configurado (no se requiere prueba de conexión local)")
-            return
-            
+        """Prueba la conexión con Ollama"""
         try:
             test_response = self.llm.invoke("Hola, ¿estás funcionando?")
             if test_response and test_response.content:

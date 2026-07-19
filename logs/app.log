@@ -7004,3 +7004,1729 @@ text
 2026-07-18 21:02:57 | INFO     | __main__:main -    🗄️ Documentos en Vector Store: 627
 2026-07-18 21:02:57 | INFO     | __main__:main - ============================================================
 2026-07-18 21:02:57 | INFO     | __main__:main - ✅ Indexación completada exitosamente
+2026-07-18 21:22:40 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:42 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:42 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:42 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:22:42 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:22:42 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:22:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:22:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:22:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:22:42 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:44 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:44 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:44 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:22:44 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:22:44 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:22:44 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:22:44 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:22:44 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:22:44 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-18 21:22:44 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:22:44 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Arquitectura_Microservicios.pdf
+2026-07-18 21:22:44 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:22:44 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:22:44 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:22:44 | INFO     | manual_test:test_pdf_loader - ✅ Arquitectura_Microservicios.pdf: 31 documentos cargados
+2026-07-18 21:22:44 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Arquitectura_Microservicios.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:44 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Backend.pdf
+2026-07-18 21:22:44 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:22:44 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:22:45 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:22:45 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Backend.pdf: 12 documentos cargados
+2026-07-18 21:22:45 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Backend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:45 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Frontend.pdf
+2026-07-18 21:22:45 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:22:45 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:22:46 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Frontend.pdf: 37 documentos cargados
+2026-07-18 21:22:46 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Frontend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:46 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Manual_Onboarding.pdf
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:22:46 | INFO     | manual_test:test_pdf_loader - ✅ Manual_Onboarding.pdf: 34 documentos cargados
+2026-07-18 21:22:46 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Manual_Onboarding.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:46 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Protocolo_Incidentes.pdf
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:22:46 | INFO     | manual_test:test_pdf_loader - ✅ Protocolo_Incidentes.pdf: 38 documentos cargados
+2026-07-18 21:22:46 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Protocolo_Incidentes.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-18 21:22:46 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-18 21:22:46 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-18 21:22:46 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/pdfs/manual_onboarding.pdf
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: manual_onboarding.pdf
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:22:46 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 34 documentos
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:22:46 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:22:46 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-18 21:22:47 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:22:47 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking - 
+📄 Cargando 5 PDFs...
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking -    📄 Arquitectura_Microservicios.pdf
+2026-07-18 21:22:47 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:22:47 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:22:47 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking -    ✅ 31 páginas cargadas
+2026-07-18 21:22:47 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Backend.pdf
+2026-07-18 21:22:47 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:22:47 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ✅ 12 páginas cargadas
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Frontend.pdf
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ✅ 37 páginas cargadas
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📄 Manual_Onboarding.pdf
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ✅ 34 páginas cargadas
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📄 Protocolo_Incidentes.pdf
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:22:49 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ✅ 38 páginas cargadas
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-18 21:22:49 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:22:49 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:22:49 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-18 21:22:49 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:22:49 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:22:49 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 164
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1044
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 226 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 300 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 938
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 252 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 1336 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1000
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 279 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 51 - 300 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 300}
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 216
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 1157 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 5 - 2128 caracteres
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 932}
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+============================================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 📊 COMPARACIÓN DE ESTRATEGIAS
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - Estrategia   Chunks     Promedio     Rango               
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - ------------------------------------------------------------
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - recursive    1044       226          2-300
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - sentence     938        252          2-1336
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - character    1000       279          51-300
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - overlap      216        1157         5-2128
+2026-07-18 21:22:49 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-18 21:22:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:51 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:52 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:52 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:22:54 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:55 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:55 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:55 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:56 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:56 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:56 | WARNING  | app.embeddings.embedding_manager:get_embedding - Texto vacío, retornando embedding zero
+2026-07-18 21:22:56 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:58 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:58 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:58 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:22:59 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:22:59 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:22:59 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:22:59 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:22:59 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:01 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:23:01 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:23:01 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:23:01 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:23:01 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:23:01 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:23:01 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 1 resultados
+2026-07-18 21:23:02 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'gatos...' → 1 resultados
+2026-07-18 21:23:02 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-0\test_save_and_load0
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-0\test_save_and_load0
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 3 documentos
+2026-07-18 21:23:04 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:23:04 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:23:05 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 0 resultados
+2026-07-18 21:23:05 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:07 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:07 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:07 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:23:07 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:23:07 | WARNING  | app.vector_store.faiss_store:search - Vector store vacío
+2026-07-18 21:23:07 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:23:08 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-18 21:23:08 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:23:10 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:23:10 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:23:10 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:23:10 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:23:10 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:23:10 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:23:10 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:23:10 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:23:10 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:23:10 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:23:10 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Arquitectura_Microservicios.pdf: 31 páginas
+2026-07-18 21:23:10 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:23:10 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:23:11 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:23:11 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Backend.pdf: 12 páginas
+2026-07-18 21:23:11 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:23:11 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:23:11 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:23:11 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Frontend.pdf: 37 páginas
+2026-07-18 21:23:11 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:23:11 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:23:12 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Manual_Onboarding.pdf: 34 páginas
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:23:12 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Protocolo_Incidentes.pdf: 38 páginas
+2026-07-18 21:23:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:23:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:23:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:23:12 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-18 21:23:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:23:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:23:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:23:12 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-18 21:23:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-18 21:23:12 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-18 21:31:40 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:31:43 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:31:43 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:31:43 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:31:43 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:31:43 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:31:43 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:31:43 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:31:43 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:31:43 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:31:44 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:31:44 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:31:44 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:31:44 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:31:44 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:31:44 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: No module named 'langchain_huggingface'
+2026-07-18 21:32:01 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:03 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:03 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:03 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:32:03 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:32:03 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:32:03 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:32:03 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:32:03 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:32:03 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:05 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:05 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:05 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:32:05 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:32:05 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:32:05 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:32:20 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:32:20 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: huggingface
+2026-07-18 21:32:20 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:32:20 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 21:32:20 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 21:32:22 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:25 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:25 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:25 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:32:25 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:32:25 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:32:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:32:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:32:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:32:25 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:26 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 452 caracteres
+2026-07-18 21:32:27 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:27 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:27 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:32:27 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:32:27 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:32:27 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:27 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:27 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:32:27 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-18 21:32:27 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:32:27 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Arquitectura_Microservicios.pdf
+2026-07-18 21:32:27 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:32:27 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:32:28 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:32:28 | INFO     | manual_test:test_pdf_loader - ✅ Arquitectura_Microservicios.pdf: 31 documentos cargados
+2026-07-18 21:32:28 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Arquitectura_Microservicios.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:28 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Backend.pdf
+2026-07-18 21:32:28 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:32:28 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:32:29 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Backend.pdf: 12 documentos cargados
+2026-07-18 21:32:29 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Backend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:29 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Frontend.pdf
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:32:29 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Frontend.pdf: 37 documentos cargados
+2026-07-18 21:32:29 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Frontend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:29 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Manual_Onboarding.pdf
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:32:29 | INFO     | manual_test:test_pdf_loader - ✅ Manual_Onboarding.pdf: 34 documentos cargados
+2026-07-18 21:32:29 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Manual_Onboarding.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:29 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Protocolo_Incidentes.pdf
+2026-07-18 21:32:29 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:32:30 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:32:30 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:32:30 | INFO     | manual_test:test_pdf_loader - ✅ Protocolo_Incidentes.pdf: 38 documentos cargados
+2026-07-18 21:32:30 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Protocolo_Incidentes.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-18 21:32:30 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-18 21:32:30 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-18 21:32:30 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/pdfs/manual_onboarding.pdf
+2026-07-18 21:32:30 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: manual_onboarding.pdf
+2026-07-18 21:32:30 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:32:30 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 34 documentos
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:32:30 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:32:30 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-18 21:32:30 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:30 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:30 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:30 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:31 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:31 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:31 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:31 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:31 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:31 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:31 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:32:31 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking - 
+📄 Cargando 5 PDFs...
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking -    📄 Arquitectura_Microservicios.pdf
+2026-07-18 21:32:31 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:32:31 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:32:31 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking -    ✅ 31 páginas cargadas
+2026-07-18 21:32:31 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Backend.pdf
+2026-07-18 21:32:31 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:32:31 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:32:32 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:32:32 | INFO     | test_chunking_manual:test_chunking -    ✅ 12 páginas cargadas
+2026-07-18 21:32:32 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Frontend.pdf
+2026-07-18 21:32:32 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:32:32 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ✅ 37 páginas cargadas
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📄 Manual_Onboarding.pdf
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ✅ 34 páginas cargadas
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📄 Protocolo_Incidentes.pdf
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:32:33 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ✅ 38 páginas cargadas
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-18 21:32:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:32:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:32:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-18 21:32:33 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:32:33 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:32:33 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 164
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1044
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 226 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 300 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 938
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 252 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 1336 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1000
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 279 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 51 - 300 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 300}
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 216
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 1157 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 5 - 2128 caracteres
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 932}
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+============================================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 📊 COMPARACIÓN DE ESTRATEGIAS
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - Estrategia   Chunks     Promedio     Rango               
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - ------------------------------------------------------------
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - recursive    1044       226          2-300
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - sentence     938        252          2-1336
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - character    1000       279          51-300
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - overlap      216        1157         5-2128
+2026-07-18 21:32:33 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-18 21:32:33 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:35 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:35 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:35 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:36 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:36 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:36 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:32:37 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:39 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:39 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:39 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:40 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:40 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:40 | WARNING  | app.embeddings.embedding_manager:get_embedding - Texto vacío, retornando embedding zero
+2026-07-18 21:32:40 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:42 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:42 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:42 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:43 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:43 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:43 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:43 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:43 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:45 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:45 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:45 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:32:45 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:32:45 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:32:45 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:32:45 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:46 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:46 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:46 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:46 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:46 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:32:46 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:32:46 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:32:47 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:32:47 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:32:47 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:32:47 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:32:47 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:32:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 1 resultados
+2026-07-18 21:32:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'gatos...' → 1 resultados
+2026-07-18 21:32:47 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-1\test_save_and_load0
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-1\test_save_and_load0
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 3 documentos
+2026-07-18 21:32:48 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:32:48 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:32:50 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 0 resultados
+2026-07-18 21:32:50 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:51 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:51 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:51 | WARNING  | app.vector_store.faiss_store:search - Vector store vacío
+2026-07-18 21:32:51 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:32:52 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-18 21:32:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:32:54 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:32:54 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:32:54 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:32:54 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:32:54 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:32:54 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:32:54 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:32:54 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:32:54 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:32:54 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:32:54 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Arquitectura_Microservicios.pdf: 31 páginas
+2026-07-18 21:32:54 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:32:54 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:32:55 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:32:55 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Backend.pdf: 12 páginas
+2026-07-18 21:32:55 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:32:55 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:32:56 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Frontend.pdf: 37 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:32:56 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Manual_Onboarding.pdf: 34 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:32:56 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Protocolo_Incidentes.pdf: 38 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:32:56 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:32:56 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:32:56 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-18 21:32:56 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:32:56 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:32:56 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:32:56 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-18 21:32:56 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-18 21:32:56 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-18 21:33:34 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:33:35 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:33:35 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:33:35 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:33:35 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:33:35 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:33:35 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:33:35 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:33:35 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:33:35 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:33:35 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:33:35 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:38:22 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:38:22 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:38:23 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:38:23 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:38:23 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:38:23 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:38:23 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:38:23 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:38:23 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:38:23 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:38:23 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:38:23 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:41:44 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Hugging Face (mistralai/Mistral-7B-Instruct-v0.2)
+2026-07-18 21:41:44 | ERROR    | app.agents.rag_agent:_setup_llm - ❌ Error configurando LLM: 1 validation error for HuggingFaceEndpoint
+  Value error, Could not authenticate with huggingface_hub. Please check your API token. [type=value_error, input_value={'repo_id': 'mistralai/Mi...stral-7B-Instruct-v0.2'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2026-07-18 21:45:54 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:45:54 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:45:54 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus?...
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 52 caracteres
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es algo que no existe?...
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 61 caracteres
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:46:18 | INFO     | app.agents.rag_agent:clear_history - 🧹 Historial de conversación limpiado
+2026-07-18 21:46:18 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:46:18 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:46:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:46:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:46:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:46:51 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:46:51 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:46:51 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:46:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:46:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:46:51 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:46:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:46:53 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:46:53 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:46:53 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:46:53 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:46:53 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:46:53 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:04 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:04 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:04 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:47:04 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 21:47:04 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 21:47:10 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 404 caracteres
+2026-07-18 21:47:10 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:47:10 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-18 21:47:10 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:47:10 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Arquitectura_Microservicios.pdf
+2026-07-18 21:47:10 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:47:10 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:47:10 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:47:10 | INFO     | manual_test:test_pdf_loader - ✅ Arquitectura_Microservicios.pdf: 31 documentos cargados
+2026-07-18 21:47:10 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Arquitectura_Microservicios.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:10 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Backend.pdf
+2026-07-18 21:47:10 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:47:10 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Backend.pdf: 12 documentos cargados
+2026-07-18 21:47:12 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Backend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Frontend.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Frontend.pdf: 37 documentos cargados
+2026-07-18 21:47:12 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Frontend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Manual_Onboarding.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - ✅ Manual_Onboarding.pdf: 34 documentos cargados
+2026-07-18 21:47:12 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Manual_Onboarding.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Protocolo_Incidentes.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:47:12 | INFO     | manual_test:test_pdf_loader - ✅ Protocolo_Incidentes.pdf: 38 documentos cargados
+2026-07-18 21:47:12 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Protocolo_Incidentes.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-18 21:47:12 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-18 21:47:12 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-18 21:47:12 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/pdfs/manual_onboarding.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: manual_onboarding.pdf
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:47:12 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 34 documentos
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:47:12 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:47:12 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus?...
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 52 caracteres
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es algo que no existe?...
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 61 caracteres
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:12 | INFO     | app.agents.rag_agent:clear_history - 🧹 Historial de conversación limpiado
+2026-07-18 21:47:12 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:47:12 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking - 
+📄 Cargando 5 PDFs...
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking -    📄 Arquitectura_Microservicios.pdf
+2026-07-18 21:47:13 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:47:13 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:47:13 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking -    ✅ 31 páginas cargadas
+2026-07-18 21:47:13 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Backend.pdf
+2026-07-18 21:47:13 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:47:13 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:47:14 | INFO     | test_chunking_manual:test_chunking -    ✅ 12 páginas cargadas
+2026-07-18 21:47:14 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Frontend.pdf
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:47:14 | INFO     | test_chunking_manual:test_chunking -    ✅ 37 páginas cargadas
+2026-07-18 21:47:14 | INFO     | test_chunking_manual:test_chunking -    📄 Manual_Onboarding.pdf
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:47:14 | INFO     | test_chunking_manual:test_chunking -    ✅ 34 páginas cargadas
+2026-07-18 21:47:14 | INFO     | test_chunking_manual:test_chunking -    📄 Protocolo_Incidentes.pdf
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:47:14 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:47:15 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ✅ 38 páginas cargadas
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-18 21:47:15 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:47:15 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:47:15 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-18 21:47:15 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:47:15 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:47:15 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 164
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1044
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 226 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 300 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 938
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 252 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 1336 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1000
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 279 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 51 - 300 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 300}
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 216
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 1157 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 5 - 2128 caracteres
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 932}
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+============================================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 📊 COMPARACIÓN DE ESTRATEGIAS
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - Estrategia   Chunks     Promedio     Rango               
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - ------------------------------------------------------------
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - recursive    1044       226          2-300
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - sentence     938        252          2-1336
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - character    1000       279          51-300
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - overlap      216        1157         5-2128
+2026-07-18 21:47:15 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-18 21:47:15 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:16 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:16 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:16 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:17 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:17 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:17 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:47:19 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:20 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:20 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:20 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:22 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:22 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:22 | WARNING  | app.embeddings.embedding_manager:get_embedding - Texto vacío, retornando embedding zero
+2026-07-18 21:47:22 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:23 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:23 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:23 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:24 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:24 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:24 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:24 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:24 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:26 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:26 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:26 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:47:26 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:47:26 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:47:26 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:47:26 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 1 resultados
+2026-07-18 21:47:27 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'gatos...' → 1 resultados
+2026-07-18 21:47:27 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-2\test_save_and_load0
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-2\test_save_and_load0
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 3 documentos
+2026-07-18 21:47:29 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:47:29 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:47:30 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 0 resultados
+2026-07-18 21:47:30 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:31 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:31 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:31 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:31 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:31 | WARNING  | app.vector_store.faiss_store:search - Vector store vacío
+2026-07-18 21:47:31 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:47:33 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-18 21:47:33 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:47:34 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:47:34 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:47:34 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:47:34 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:47:34 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:47:34 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:47:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:47:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:47:38 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:47:38 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:47:39 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:47:39 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Arquitectura_Microservicios.pdf: 31 páginas
+2026-07-18 21:47:39 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:47:39 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:47:40 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Backend.pdf: 12 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:47:40 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Frontend.pdf: 37 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:47:40 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Manual_Onboarding.pdf: 34 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:47:40 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Protocolo_Incidentes.pdf: 38 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:47:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:47:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:47:40 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-18 21:47:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:47:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:47:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:47:40 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-18 21:47:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-18 21:47:40 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-18 21:52:13 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:15 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:15 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:15 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:52:15 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:52:15 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:52:16 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:52:16 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:52:16 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:52:16 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:17 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:17 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:17 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:52:17 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:52:17 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:52:17 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:21 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:21 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-18 21:52:21 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:52:21 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 21:52:21 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 21:52:23 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 172 caracteres
+2026-07-18 21:52:27 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:29 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:29 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:29 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:52:29 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:52:29 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:52:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 21:52:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 21:52:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 21:52:29 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:30 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:30 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:30 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:52:30 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:52:30 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:52:30 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:34 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:34 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:52:34 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:52:34 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 21:52:34 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 21:52:35 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 235 caracteres
+2026-07-18 21:52:35 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:52:35 | INFO     | manual_test:test_pdf_loader - 📄 Probando PDFLoader
+2026-07-18 21:52:35 | INFO     | manual_test:test_pdf_loader - ==================================================
+2026-07-18 21:52:35 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Arquitectura_Microservicios.pdf
+2026-07-18 21:52:35 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:52:35 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:52:36 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:52:36 | INFO     | manual_test:test_pdf_loader - ✅ Arquitectura_Microservicios.pdf: 31 documentos cargados
+2026-07-18 21:52:36 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Arquitectura_Microservicios.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:36 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Backend.pdf
+2026-07-18 21:52:36 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:52:36 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:52:37 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Backend.pdf: 12 documentos cargados
+2026-07-18 21:52:37 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Backend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:37 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Guia_Frontend.pdf
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:52:37 | INFO     | manual_test:test_pdf_loader - ✅ Guia_Frontend.pdf: 37 documentos cargados
+2026-07-18 21:52:37 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Guia_Frontend.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:37 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Manual_Onboarding.pdf
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:52:37 | INFO     | manual_test:test_pdf_loader - ✅ Manual_Onboarding.pdf: 34 documentos cargados
+2026-07-18 21:52:37 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Manual_Onboarding.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:37 | INFO     | manual_test:test_pdf_loader - 📄 Cargando: Protocolo_Incidentes.pdf
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:52:37 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:52:38 | INFO     | manual_test:test_pdf_loader - ✅ Protocolo_Incidentes.pdf: 38 documentos cargados
+2026-07-18 21:52:38 | ERROR    | manual_test:test_pdf_loader - ❌ Error cargando Protocolo_Incidentes.pdf: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📊 Probando CSVLoader
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - ==================================================
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📊 Cargando: arquitectura_microservicios.csv
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - ✅ arquitectura_microservicios.csv: 7 filas cargadas
+2026-07-18 21:52:38 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando arquitectura_microservicios.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 8 líneas
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📊 Cargando: incidentes_protocolo.csv
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - ✅ incidentes_protocolo.csv: 5 filas cargadas
+2026-07-18 21:52:38 | ERROR    | manual_test:test_csv_loader - ❌ Error cargando incidentes_protocolo.csv: 'dict' object has no attribute 'page_content'
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📄 El archivo tiene 7 líneas
+2026-07-18 21:52:38 | INFO     | manual_test:test_csv_loader - 📄 Primeras 3 líneas:
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - 🔍 Probando archivos específicos
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - ==================================================
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/pdfs/manual_onboarding.pdf
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: manual_onboarding.pdf
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 34 documentos
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - 📄 Probando: data/csv/incidentes_protocolo.csv
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:52:38 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:52:38 | INFO     | manual_test:test_with_existing_files - ✅ Cargado: 5 documentos
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus?...
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 52 caracteres
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es algo que no existe?...
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 61 caracteres
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:52:38 | INFO     | app.agents.rag_agent:clear_history - 🧹 Historial de conversación limpiado
+2026-07-18 21:52:38 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:52:38 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking - 🚀 Probando sistema de chunking...
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking - 
+📄 Cargando 5 PDFs...
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking -    📄 Arquitectura_Microservicios.pdf
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking -    ✅ 31 páginas cargadas
+2026-07-18 21:52:38 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Backend.pdf
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:52:38 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:52:39 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:52:39 | INFO     | test_chunking_manual:test_chunking -    ✅ 12 páginas cargadas
+2026-07-18 21:52:39 | INFO     | test_chunking_manual:test_chunking -    📄 Guia_Frontend.pdf
+2026-07-18 21:52:39 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:52:39 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ✅ 37 páginas cargadas
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📄 Manual_Onboarding.pdf
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ✅ 34 páginas cargadas
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📄 Protocolo_Incidentes.pdf
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:52:40 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ✅ 38 páginas cargadas
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+📊 Cargando 2 CSVs...
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📊 arquitectura_microservicios.csv
+2026-07-18 21:52:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:52:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:52:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ✅ 7 filas cargadas
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📊 incidentes_protocolo.csv
+2026-07-18 21:52:40 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:52:40 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:52:40 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ✅ 5 filas cargadas
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+📄 Total documentos cargados: 164
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 📊 Total caracteres: 0
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 📊 Promedio por documento: 0 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: RECURSIVE
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1044
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 226 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 300 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: SENTENCE
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 938
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 252 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 2 - 1336 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0.
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 154}
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: CHARACTER
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 1000
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 279 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 51 - 300 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 4, 'chunk_size': 300}
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 🔧 Probando estrategia: OVERLAP
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - ========================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📊 Chunks generados: 216
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📏 Tamaño promedio: 1157 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📐 Rango: 5 - 2128 caracteres
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+   📝 Ejemplo de chunk:
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    Arquitectura de Microservicios y Mapa de Dominios Santo Pegasus Soluciones --- Documento: Arquitectura de Microservicios y Mapa de Dominios Versión: 1. 0. 0 Fecha de Emisión: Junio 2026 Departamento: ...
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    ----------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking -    📌 Metadata: {'source': 'data\\pdfs\\Arquitectura_Microservicios.pdf', 'filename': 'Arquitectura_Microservicios.pdf', 'page': 1, 'total_pages': 31, 'file_size': 562287, 'type': 'pdf', 'chunk_index': 0, 'total_chunks': 1, 'chunk_size': 932}
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+============================================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 📊 COMPARACIÓN DE ESTRATEGIAS
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - ============================================================
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - Estrategia   Chunks     Promedio     Rango               
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - ------------------------------------------------------------
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - recursive    1044       226          2-300
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - sentence     938        252          2-1336
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - character    1000       279          51-300
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - overlap      216        1157         5-2128
+2026-07-18 21:52:40 | INFO     | test_chunking_manual:test_chunking - 
+✅ Prueba completada!
+2026-07-18 21:52:40 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:41 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:41 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:41 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:43 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:43 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:43 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:52:44 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:46 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:46 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:46 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:47 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:47 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:47 | WARNING  | app.embeddings.embedding_manager:get_embedding - Texto vacío, retornando embedding zero
+2026-07-18 21:52:47 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:49 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:49 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:50 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:50 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:50 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:50 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:50 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:51 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:51 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:51 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:52:51 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:52:51 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:52:52 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:52:52 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:52:52 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:52:52 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:52:52 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:52:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 1 resultados
+2026-07-18 21:52:53 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'gatos...' → 1 resultados
+2026-07-18 21:52:53 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:save - 💾 Guardando vector store en C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-3\test_save_and_load0
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:save - ✅ Vector store guardado exitosamente
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde C:\Users\Aley Cabrera D\AppData\Local\Temp\pytest-of-Aley Cabrera D\pytest-3\test_save_and_load0
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 3 documentos
+2026-07-18 21:52:54 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:52:54 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:52:56 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'perros...' → 0 resultados
+2026-07-18 21:52:56 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:57 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:57 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:57 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:57 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:57 | WARNING  | app.vector_store.faiss_store:search - Vector store vacío
+2026-07-18 21:52:57 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:create_index - 🔧 Creando índice FAISS (dim=384, type=flat)
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:create_index - ✅ Índice FAISS creado
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:add_documents - 📥 Agregando 3 documentos al vector store
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:add_documents -    Generando embeddings...
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:get_embeddings - 📊 Generando embeddings para 3 textos (batch_size=32)
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:get_embeddings -    ✅ Batch 1/1 completado
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:get_embeddings - ✅ Generados 3 embeddings
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:get_embeddings -    📊 Cache: 0 hits, 0 misses
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:add_documents - ✅ Agregados 3 documentos al índice
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:add_documents -    Total documentos en índice: 3
+2026-07-18 21:52:59 | INFO     | app.vector_store.faiss_store:clear - 🧹 Vector store limpiado
+2026-07-18 21:52:59 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:53:00 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:53:00 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:53:00 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:53:00 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:53:00 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:53:00 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:53:04 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:53:04 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:53:04 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Cuáles son los valores de Santo Pegasus?...
+2026-07-18 21:53:04 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuáles son los valores de Santo Pegasus?...' → 5 resultados
+2026-07-18 21:53:09 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 355 caracteres
+2026-07-18 21:53:09 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué principios SOLID aplican en el back-end?...
+2026-07-18 21:53:09 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué principios SOLID aplican en el back-end?...' → 5 resultados
+2026-07-18 21:53:15 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 401 caracteres
+2026-07-18 21:53:15 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es un incidente SEV-1?...
+2026-07-18 21:53:15 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es un incidente SEV-1?...' → 5 resultados
+2026-07-18 21:53:20 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 252 caracteres
+2026-07-18 21:53:20 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Arquitectura_Microservicios.pdf
+2026-07-18 21:53:20 | INFO     | app.loaders.pdf_loader:load - PDF tiene 31 páginas
+2026-07-18 21:53:21 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 31 páginas del PDF
+2026-07-18 21:53:21 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Arquitectura_Microservicios.pdf: 31 páginas
+2026-07-18 21:53:21 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Backend.pdf
+2026-07-18 21:53:21 | INFO     | app.loaders.pdf_loader:load - PDF tiene 12 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 12 páginas del PDF
+2026-07-18 21:53:22 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Backend.pdf: 12 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Guia_Frontend.pdf
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - PDF tiene 37 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 37 páginas del PDF
+2026-07-18 21:53:22 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Guia_Frontend.pdf: 37 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Manual_Onboarding.pdf
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - PDF tiene 34 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 34 páginas del PDF
+2026-07-18 21:53:22 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Manual_Onboarding.pdf: 34 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: Protocolo_Incidentes.pdf
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - PDF tiene 38 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 38 páginas del PDF
+2026-07-18 21:53:22 | INFO     | test_loaders_integration:test_load_pdf_documents - ✅ PDF Protocolo_Incidentes.pdf: 38 páginas
+2026-07-18 21:53:22 | INFO     | app.loaders.csv_loader:load - Cargando CSV: arquitectura_microservicios.csv
+2026-07-18 21:53:22 | INFO     | app.loaders.csv_loader:load - CSV tiene 7 filas y 5 columnas
+2026-07-18 21:53:22 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 7 filas del CSV
+2026-07-18 21:53:22 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV arquitectura_microservicios.csv: 7 filas
+2026-07-18 21:53:22 | INFO     | app.loaders.csv_loader:load - Cargando CSV: incidentes_protocolo.csv
+2026-07-18 21:53:22 | INFO     | app.loaders.csv_loader:load - CSV tiene 5 filas y 6 columnas
+2026-07-18 21:53:22 | INFO     | app.loaders.csv_loader:load - ✅ Procesadas 5 filas del CSV
+2026-07-18 21:53:22 | INFO     | test_loaders_integration:test_load_csv_documents - ✅ CSV incidentes_protocolo.csv: 5 filas
+2026-07-18 21:53:22 | INFO     | app.loaders.pdf_loader:load - Cargando PDF: test.pdf
+2026-07-18 21:53:23 | INFO     | app.loaders.pdf_loader:load - PDF tiene 1 páginas
+2026-07-18 21:53:23 | INFO     | app.loaders.pdf_loader:load - ✅ Extraídas 1 páginas del PDF
+2026-07-18 21:53:23 | ERROR    | app.loaders.base_loader:validate_path - Ruta no encontrada: nonexistent.pdf
+2026-07-18 21:56:08 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 21:56:10 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 21:56:10 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 21:56:10 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 21:56:10 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 21:56:10 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 21:56:10 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 21:56:14 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 21:56:14 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama
+2026-07-18 21:56:14 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 21:56:39 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: En que puedes ayudarme...
+2026-07-18 21:56:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'En que puedes ayudarme...' → 5 resultados
+2026-07-18 21:56:47 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 258 caracteres
+2026-07-18 21:57:07 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: cual es el proceso del frontend...
+2026-07-18 21:57:07 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'cual es el proceso del frontend...' → 5 resultados
+2026-07-18 21:57:15 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 365 caracteres
+2026-07-18 21:57:29 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: explicame la guia del frontend...
+2026-07-18 21:57:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'explicame la guia del frontend...' → 5 resultados
+2026-07-18 21:57:41 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 915 caracteres
+2026-07-18 22:00:21 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:00:23 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:00:24 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-18 22:00:24 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:00:24 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:00:24 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:00:24 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:00:24 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:00:24 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:00:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 22:00:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 22:00:25 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 22:00:25 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:00:25 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-18 22:00:26 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:00:26 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-18 22:00:27 | ERROR    | app.embeddings.embedding_manager:_load_model - ❌ Error cargando modelo: El archivo de paginación es demasiado pequeño para completar la operación. (os error 1455)
+2026-07-18 22:00:28 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:00:28 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:00:28 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:00:28 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:00:28 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:00:28 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 22:00:33 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 22:00:33 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-18 22:00:33 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 22:00:33 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 22:00:33 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 22:00:39 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 617 caracteres
+2026-07-18 22:03:34 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:03:39 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:03:39 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:03:39 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:03:39 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 22:03:39 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 22:03:39 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:03:39 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:03:40 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:03:40 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:03:40 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:03:40 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:03:40 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:03:40 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 22:03:40 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:03:40 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:03:40 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:03:40 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:03:40 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:03:40 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 22:03:46 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 22:03:46 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-18 22:03:46 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 22:03:46 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 22:03:46 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 22:03:47 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 22:03:47 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-18 22:03:47 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 22:03:47 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 22:03:47 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 22:03:49 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 308 caracteres
+2026-07-18 22:03:51 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 332 caracteres
+2026-07-18 22:04:22 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:04:28 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:04:28 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:04:28 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:04:28 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:04:28 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:04:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 22:04:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 22:04:29 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 22:04:29 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:04:30 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:04:30 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:04:30 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:04:30 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:04:30 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:04:30 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 22:04:34 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 22:04:34 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-18 22:04:34 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 22:04:34 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 22:04:35 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 22:04:37 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 351 caracteres
+2026-07-18 22:04:49 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:04:51 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:04:51 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:04:51 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:04:51 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:04:51 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:04:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-18 22:04:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-18 22:04:52 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-18 22:04:52 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-18 22:04:53 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-18 22:04:53 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-18 22:04:53 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-18 22:04:53 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-18 22:04:53 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-18 22:04:53 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-18 22:04:57 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-18 22:04:57 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-18 22:04:57 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-18 22:04:57 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-18 22:04:57 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-18 22:04:59 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 472 caracteres
+2026-07-18 22:05:01 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: En que puedes ayudarme...
+2026-07-18 22:05:01 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: 'En que puedes ayudarme...' → 5 resultados
+2026-07-18 22:05:08 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 450 caracteres

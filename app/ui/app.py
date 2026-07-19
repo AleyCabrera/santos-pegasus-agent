@@ -372,14 +372,20 @@ with st.sidebar:
     
     # Modelo
     st.markdown("**🧠 Modelo LLM**")
-    if settings.LLM_PROVIDER == "huggingface":
-        st.code(settings.HF_MODEL, language="bash")
-        st.caption("Proveedor: Hugging Face Inference API")
-    elif settings.LLM_PROVIDER == "groq":
-        st.code(settings.GROQ_MODEL, language="bash")
+    llm_provider = getattr(settings, 'LLM_PROVIDER', 'ollama').lower()  # ← Forzar minúsculas
+
+    if llm_provider == "ollama":
+        st.code(getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b'), language="bash")
+        st.caption("Proveedor: Ollama (Local)")
+    elif llm_provider == "huggingface":
+        st.code(getattr(settings, 'HF_MODEL', 'mistralai/Mistral-7B-Instruct-v0.2'), language="bash")
+        st.caption("Proveedor: Hugging Face")
+    elif llm_provider == "groq":
+        st.code(getattr(settings, 'GROQ_MODEL', 'llama3-8b-8192'), language="bash")
         st.caption("Proveedor: Groq Cloud")
     else:
-        st.warning("Proveedor de LLM no reconocido")
+        st.code(getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b'), language="bash")
+        st.caption(f"Proveedor: {llm_provider.title()} (Default: Ollama)")
 
     # Parámetros
     st.markdown("**📊 Parámetros de búsqueda**")

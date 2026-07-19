@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     """Configuración centralizada de la aplicación"""
     
     # --- NUEVO: Configuración del Proveedor de LLM ---
-    LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "huggingface") # "huggingface", "groq" o "ollama"
+    LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "ollama") # "huggingface", "groq" o "ollama"
     
     # Hugging Face
     HF_TOKEN: str = os.getenv("HF_TOKEN", "")
