@@ -1,7 +1,18 @@
 """Agente RAG con LangChain y proveedores configurables"""
 import sys
+from pathlib import Path
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
+
+# ==========================================
+# SOLUCIÓN INFALIBLE PARA STREAMLIT CLOUD
+# ==========================================
+# Forzar la inclusión de la raíz del proyecto en el sys.path.
+# Esto garantiza que los imports 'from app...' funcionen en cualquier entorno.
+project_root = Path(__file__).resolve().parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
@@ -49,9 +60,12 @@ class RAGAgent:
         context_window: Optional[int] = None
     ):
         self.logger = logger
-        self.model_name = model_name or settings.OLLAMA_MODEL
-        self.temperature = temperature or settings.OLLAMA_TEMPERATURE
-        self.context_window = context_window or settings.OLLAMA_CONTEXT_WINDOW
+        
+        # Uso seguro de getattr para evitar AttributeError en la nube
+        self.llm_provider = getattr(settings, 'LLM_PROVIDER', 'ollama').lower()
+        self.model_name = model_name or getattr(settings, 'OLLAMA_MODEL', 'llama3.2:3b')
+        self.temperature = temperature or getattr(settings, 'OLLAMA_TEMPERATURE', 0.7)
+        self.context_window = context_window or getattr(settings, 'OLLAMA_CONTEXT_WINDOW', 2048)
         
         self.embedding_manager = embedding_manager or EmbeddingManager()
         self.vector_store = vector_store or FAISSVectorStore(self.embedding_manager)
@@ -65,26 +79,33 @@ class RAGAgent:
         self.max_history = 10
         
         self._setup_llm()
-        self.logger.info(f"🤖 Agente RAG inicializado con proveedor: {settings.LLM_PROVIDER}")
+        self.logger.info(f"🤖 Agente RAG inicializado con proveedor: {self.llm_provider}")
 
     def _setup_llm(self):
         """Configura el modelo LLM según el proveedor definido en settings"""
         try:
-            provider = settings.LLM_PROVIDER.lower()
-            
-            if provider == "huggingface" and HuggingFaceEndpoint:
-                self.logger.info(f"🔗 Configurando LLM: Hugging Face ({settings.HF_MODEL})")
+            if self.llm_provider == "huggingface" and HuggingFaceEndpoint:
+                hf_token = getattr(settings, 'HF_TOKEN', '')
+                hf_model = getattr(settings, 'HF_MODEL', 'mistralai/Mistral-7B-Instruct-v0.2')
+                
+                if not hf_token or hf_token.startswith("hf_tu_token"):
+                    self.logger.warning("⚠️ HF_TOKEN no configurado o es de ejemplo. La conexión fallará.")
+                
+                self.logger.info(f"🔗 Configurando LLM: Hugging Face ({hf_model})")
                 self.llm = HuggingFaceEndpoint(
-                    repo_id=settings.HF_MODEL,
-                    huggingfacehub_api_token=settings.HF_TOKEN,
+                    repo_id=hf_model,
+                    huggingfacehub_api_token=hf_token,
                     temperature=self.temperature,
                     max_new_tokens=512,
                 )
-            elif provider == "groq" and ChatGroq:
-                self.logger.info(f"🔗 Configurando LLM: Groq ({settings.GROQ_MODEL})")
+            elif self.llm_provider == "groq" and ChatGroq:
+                groq_key = getattr(settings, 'GROQ_API_KEY', '')
+                groq_model = getattr(settings, 'GROQ_MODEL', 'llama3-8b-8192')
+                
+                self.logger.info(f"🔗 Configurando LLM: Groq ({groq_model})")
                 self.llm = ChatGroq(
-                    model=settings.GROQ_MODEL,
-                    groq_api_key=settings.GROQ_API_KEY,
+                    model=groq_model,
+                    groq_api_key=groq_key,
                     temperature=self.temperature,
                 )
             else: # Default a Ollama para desarrollo local y tests
@@ -93,7 +114,7 @@ class RAGAgent:
                     model=self.model_name,
                     temperature=self.temperature,
                     num_ctx=self.context_window,
-                    base_url=settings.OLLAMA_HOST,
+                    base_url=getattr(settings, 'OLLAMA_HOST', 'http://localhost:11434'),
                     num_predict=512,
                     top_k=40,
                     top_p=0.9
@@ -108,7 +129,7 @@ class RAGAgent:
         """Prueba la conexión con Ollama"""
         try:
             test_response = self.llm.invoke("Hola, ¿estás funcionando?")
-            if test_response and test_response.content:
+            if test_response and hasattr(test_response, 'content') and test_response.content:
                 self.logger.info("✅ Conexión con Ollama establecida")
             else:
                 self.logger.warning("⚠️ Respuesta vacía de Ollama")
@@ -160,7 +181,9 @@ class RAGAgent:
             chain = self.llm | StrOutputParser()
             response = chain.invoke(messages[-1][1])
             
-            if not response or not response.strip():
+            # Asegurar que la respuesta sea siempre un string
+            response = str(response) if response else ""
+            if not response.strip():
                 response = "Lo siento, no pude generar una respuesta. ¿Podrías reformular tu pregunta?"
                 
             self._add_to_history(question, response)
@@ -226,8 +249,13 @@ class RAGAgent:
         return summary
 
     def get_stats(self) -> Dict[str, Any]:
+        hf_model = getattr(settings, 'HF_MODEL', 'N/A')
+        groq_model = getattr(settings, 'GROQ_MODEL', 'N/A')
+        
+        current_model = hf_model if self.llm_provider == "huggingface" else (groq_model if self.llm_provider == "groq" else self.model_name)
+        
         return {
-            'model': settings.HF_MODEL if settings.LLM_PROVIDER == "huggingface" else (settings.GROQ_MODEL if settings.LLM_PROVIDER == "groq" else self.model_name),
+            'model': current_model,
             'temperature': self.temperature,
             'context_window': self.context_window,
             'vector_store_loaded': self.vector_store.is_loaded,
