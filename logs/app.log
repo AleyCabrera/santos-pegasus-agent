@@ -9195,3 +9195,25 @@ text
 2026-07-19 09:32:19 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
 2026-07-19 09:32:19 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
 2026-07-19 09:32:21 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 304 caracteres
+2026-07-19 10:16:31 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-19 10:16:40 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-19 10:16:40 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-19 10:16:40 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-19 10:16:40 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-19 10:16:40 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-19 10:16:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cómo se manejan los incidentes críticos?...' → 2 resultados
+2026-07-19 10:16:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Cuál es la estructura organizacional?...' → 2 resultados
+2026-07-19 10:16:42 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué herramientas de comunicación usan?...' → 2 resultados
+2026-07-19 10:16:42 | INFO     | app.embeddings.embedding_manager:_load_model - 🔧 Cargando modelo de embeddings: all-MiniLM-L6-v2
+2026-07-19 10:16:43 | INFO     | app.embeddings.embedding_manager:_load_model - ✅ Modelo cargado: all-MiniLM-L6-v2
+2026-07-19 10:16:43 | INFO     | app.embeddings.embedding_manager:_load_model -    📏 Dimensiones del embedding: 384
+2026-07-19 10:16:43 | INFO     | app.vector_store.faiss_store:load - 📂 Cargando vector store desde vector_store\faiss_index
+2026-07-19 10:16:43 | INFO     | app.vector_store.faiss_store:load - ✅ Vector store cargado: 627 documentos
+2026-07-19 10:16:43 | INFO     | app.vector_store.faiss_store:load -    📏 Dimensión: 384
+2026-07-19 10:16:43 | INFO     | app.agents.rag_agent:_setup_llm - 🔗 Configurando LLM: Ollama (llama3.2:3b)
+2026-07-19 10:17:11 | INFO     | app.agents.rag_agent:_test_connection - ✅ Conexión con Ollama establecida
+2026-07-19 10:17:11 | INFO     | app.agents.rag_agent:__init__ - 🤖 Agente RAG inicializado con proveedor: ollama  # "huggingface", "groq" o "ollama"
+2026-07-19 10:17:11 | INFO     | app.services.chat_service:__init__ - 💬 Servicio de chat inicializado
+2026-07-19 10:17:11 | INFO     | app.agents.rag_agent:ask - 📝 Pregunta: ¿Qué es Santos Pegasus Soluciones?...
+2026-07-19 10:17:13 | INFO     | app.vector_store.faiss_store:search - 🔍 Búsqueda: '¿Qué es Santos Pegasus Soluciones?...' → 5 resultados
+2026-07-19 10:17:26 | INFO     | app.agents.rag_agent:ask - ✅ Respuesta generada: 292 caracteres
