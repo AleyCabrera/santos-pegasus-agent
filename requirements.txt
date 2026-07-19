@@ -37,6 +37,7 @@ sentence-transformers==3.3.1      # Última versión estable
 transformers==4.47.1              # Compatible con sentence-transformers 3.3.1
 huggingface-hub==0.27.1           # Para descargar modelos
 tokenizers==0.21.0                # Tokenización rápida
+codecarbon==2.8.1                 # Para medir el consumo de energía (opcional)
 
 # ============================================================
 # LANGCHAIN - Orquestación del agente RAG
