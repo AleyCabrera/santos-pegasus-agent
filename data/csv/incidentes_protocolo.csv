@@ -1,7 +1,0 @@
-
-Severidad,Nivel,Descripcion,Tiempo_Respuesta,Accion_Immediata,Escalamiento
-0,Critico,Sistema completo caído o pérdida de datos,15 minutos,Alertar a todos los equipos,CTO + Director de Operaciones
-1,Alto,Caída de servicio crítico afectando a >50% usuarios,30 minutos,Formar equipo de incidentes,Head de Ingeniería
-2,Medio,Funcionalidad degradada afectando a <50% usuarios,1 hora,Diagnóstico y análisis,Team Lead
-3,Bajo,Fallo en funcionalidad no crítica,4 horas,Documentar y priorizar,Desarrollador asignado
-4,Informativo,Incidente reportado sin impacto en producción,1 día,Registrar en sistema de tickets,Equipo de soporte

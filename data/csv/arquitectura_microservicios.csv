@@ -1,8 +1,0 @@
-Servicio,Descripcion,Base_Datos,Comunicacion,Dependencias
-API Gateway,Punto de entrada único para todas las API,Redis,HTTP/REST,Todos los servicios
-Usuarios,Autenticación y gestión de usuarios,PostgreSQL,HTTP/gRPC,Ninguna
-Pedidos,Gestión de pedidos y carritos,PostgreSQL + MongoDB,HTTP/RabbitMQ,Usuarios + Inventario
-Inventario,Control de stock y almacenes,PostgreSQL,HTTP,Kafka
-Pagos,Integración con pasarelas de pago,PostgreSQL,HTTP/Pedidos
-Notificaciones,Envío de emails y push,Redis,RabbitMQ/Usuarios + Pedidos
-Analítica,Procesamiento de datos y métricas,Elasticsearch,HTTP,All services
