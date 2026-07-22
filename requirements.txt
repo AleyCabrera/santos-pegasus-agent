@@ -1,0 +1,21 @@
+# Core dependencies
+python-dotenv==1.0.1
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-cohere==0.3.2
+cohere==5.11.3
+
+# Vector store
+faiss-cpu==1.8.0.post1
+
+# Document processing
+pypdf==5.1.0
+pandas==2.2.3
+fpdf==1.7.2
+
+# UI
+streamlit==1.39.0
+
+# Utilities
+requests==2.32.3
+tqdm==4.67.0
