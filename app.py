@@ -1,6 +1,6 @@
 """
-Aplicación Streamlit - Interfaz del agente
-Diseño premium, moderno e inmersivo para Santos Pegasus Soluciones
+Aplicación Streamlit - Santos Pegasus Agente IA
+Diseño moderno con sidebar, estadísticas y experiencia mejorada
 """
 import streamlit as st
 import logging
@@ -16,489 +16,335 @@ from src.vectorstore import load_vector_store
 from src.ingest import process_documents
 from src.vectorstore import create_vector_store
 
-# Configuración de la página
+# ============================================
+# CONFIGURACIÓN DE LA PÁGINA
+# ============================================
 st.set_page_config(
     page_title="Santos Pegasus - Agente IA",
-    page_icon="🚀",
+    page_icon="🤖",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': "Santos Pegasus Soluciones - Agente IA RAG v1.0.0"
+    }
 )
 
-# ============================================================
-# CSS PERSONALIZADO - DISEÑO PREMIUM
-# ============================================================
+# ============================================
+# CSS PERSONALIZADO MEJORADO
+# ============================================
 st.markdown("""
 <style>
-    /* ===== FUENTES Y RESET ===== */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
     
-    * {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        box-sizing: border-box;
+    :root {
+        --primary-color: #667eea;
+        --secondary-color: #764ba2;
+        --background-dark: #0f172a;
+        --surface-dark: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --error-color: #ef4444;
     }
     
-    /* ===== FONDO CON EFECTO ===== */
+    * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    
+    /* Fondo principal */
     .stApp {
-        background: #0a0e1a;
-        position: relative;
+        background: #f8fafc;
     }
     
-    .stApp::before {
-        content: '';
-        position: fixed;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: 
-            radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 50%, rgba(56, 189, 248, 0.06) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 100%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
-        z-index: 0;
-        pointer-events: none;
-    }
+    /* Ocultar elementos innecesarios */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .stDeployButton {display: none;}
+    header {background: transparent !important;}
     
-    /* ===== CONTENEDOR PRINCIPAL ===== */
-    .main-wrapper {
-        position: relative;
-        z-index: 1;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1.5rem 2rem 2rem;
-    }
-    
-    /* ===== HEADER PREMIUM ===== */
-    .header-premium {
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 27, 75, 0.95) 100%);
-        backdrop-filter: blur(20px);
-        border-radius: 2rem;
-        padding: 2.5rem 3rem;
-        margin-bottom: 2rem;
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .header-premium::before {
-        content: '';
-        position: absolute;
-        top: -60%;
-        right: -20%;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle, rgba(99, 102, 241, 0.20) 0%, transparent 70%);
-        border-radius: 50%;
-        animation: float-glow 8s ease-in-out infinite;
-    }
-    
-    .header-premium::after {
-        content: '';
-        position: absolute;
-        bottom: -40%;
-        left: -10%;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
-        border-radius: 50%;
-        animation: float-glow 10s ease-in-out infinite reverse;
-    }
-    
-    @keyframes float-glow {
-        0%, 100% { transform: translate(0, 0) scale(1); }
-        50% { transform: translate(30px, -20px) scale(1.1); }
-    }
-    
-    .header-content {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-    
-    .header-left {
-        flex: 1;
-        min-width: 250px;
-    }
-    
-    .badge-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        background: rgba(52, 211, 153, 0.12);
-        padding: 0.4rem 1.2rem 0.4rem 0.8rem;
-        border-radius: 2rem;
-        border: 1px solid rgba(52, 211, 153, 0.15);
-        margin-bottom: 1rem;
-        font-size: 0.7rem;
-        font-weight: 500;
-        color: #34d399;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-    }
-    
-    .badge-status .dot {
-        width: 7px;
-        height: 7px;
-        background: #34d399;
-        border-radius: 50%;
-        display: inline-block;
-        animation: pulse-dot 1.5s ease-in-out infinite;
-        box-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
-    }
-    
-    @keyframes pulse-dot {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.5; transform: scale(0.7); }
-    }
-    
-    .brand-title {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin: 0 0 0.3rem 0;
-    }
-    
-    .brand-icon {
-        font-size: 2.8rem;
-        filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
-        animation: float-icon 4s ease-in-out infinite;
-    }
-    
-    @keyframes float-icon {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-    }
-    
-    .brand-name {
-        font-size: 2.6rem;
-        font-weight: 900;
-        color: #ffffff;
-        letter-spacing: -1px;
-        background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    
-    .brand-subtitle {
-        font-size: 1.1rem;
-        font-weight: 400;
-        color: #94a3b8;
-        margin: 0.2rem 0 0 0;
-        letter-spacing: 0.2px;
-    }
-    
-    .brand-subtitle .highlight {
-        color: #818cf8;
-        font-weight: 500;
-    }
-    
-    .header-right {
-        display: flex;
-        gap: 1.2rem;
-        flex-wrap: wrap;
-        align-items: center;
-        padding-top: 0.5rem;
-    }
-    
-    .stat-card {
-        background: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(10px);
-        padding: 0.6rem 1.2rem;
-        border-radius: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        text-align: center;
-        min-width: 80px;
-        transition: all 0.3s ease;
-    }
-    
-    .stat-card:hover {
-        background: rgba(255, 255, 255, 0.08);
-        transform: translateY(-2px);
-    }
-    
-    .stat-number {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: #ffffff;
-        display: block;
-    }
-    
-    .stat-label {
-        font-size: 0.6rem;
-        color: #64748b;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-weight: 500;
-    }
-    
-    /* ===== CHAT CONTAINER ===== */
-    .chat-wrapper {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(20px);
-        border-radius: 2rem;
+    /* Header principal */
+    .main-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 2rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        min-height: 500px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        color: white;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    /* ===== MENSAJES ===== */
-    .stChatMessage {
-        background: transparent !important;
-        padding: 0.8rem 0 !important;
-        border: none !important;
+    .main-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        letter-spacing: -0.5px;
     }
     
-    /* Mensaje del usuario */
-    .stChatMessage [data-testid="stChatMessageContent"] {
-        background: linear-gradient(135deg, rgba(99, 102, 241, 0.20) 0%, rgba(139, 92, 246, 0.15) 100%) !important;
-        color: #e2e8f0 !important;
-        border-radius: 1.2rem 1.2rem 0.3rem 1.2rem !important;
-        padding: 0.9rem 1.3rem !important;
-        max-width: 80% !important;
-        margin-left: auto !important;
-        border: 1px solid rgba(99, 102, 241, 0.15) !important;
-        backdrop-filter: blur(10px) !important;
-        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.08) !important;
+    .main-header p {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0.5rem 0 0 0;
+        font-weight: 400;
     }
     
-    /* Mensaje del asistente */
-    .stChatMessage [data-testid="stChatMessageContent"]:has(.assistant-message) {
-        background: rgba(255, 255, 255, 0.05) !important;
-        color: #e2e8f0 !important;
-        border-radius: 1.2rem 1.2rem 1.2rem 0.3rem !important;
-        padding: 0.9rem 1.3rem !important;
-        max-width: 80% !important;
-        margin-right: auto !important;
-        border: 1px solid rgba(255, 255, 255, 0.06) !important;
-        backdrop-filter: blur(10px) !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-    }
-    
-    .assistant-message {
-        color: #e2e8f0;
+    /* Mensajes del usuario */
+    .user-message {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 14px 18px;
+        border-radius: 18px 18px 4px 18px;
+        margin: 8px 0;
+        max-width: 80%;
+        float: right;
+        clear: both;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
         line-height: 1.6;
+        font-size: 0.95rem;
+    }
+    
+    /* Mensajes del asistente */
+    .assistant-message {
+        background: #ffffff;
+        color: #1e293b;
+        padding: 14px 18px;
+        border-radius: 18px 18px 18px 4px;
+        margin: 8px 0;
+        max-width: 80%;
+        float: left;
+        clear: both;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        border-left: 4px solid #667eea;
+        line-height: 1.6;
+        font-size: 0.95rem;
     }
     
     .assistant-message strong {
-        color: #a5b4fc;
+        color: #4f46e5;
     }
     
-    /* Avatar del asistente */
-    .stChatMessage .avatar {
-        background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
-        border-radius: 50% !important;
-        width: 40px !important;
-        height: 40px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-size: 1.2rem !important;
-        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
+    .message-container {
+        display: flow-root;
+        margin-bottom: 8px;
+        animation: fadeIn 0.3s ease-in;
     }
     
-    /* ===== INPUT ===== */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Badges de fuentes */
+    .source-badge {
+        background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        color: #4f46e5;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        display: inline-block;
+        margin: 3px 5px 3px 0;
+        border: 1px solid rgba(79, 70, 229, 0.15);
+        transition: all 0.2s;
+    }
+    
+    .source-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(79, 70, 229, 0.15);
+    }
+    
+    /* Sidebar */
+    .sidebar-header {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #667eea;
+        border-bottom: 2px solid #667eea;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .stats-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        color: #1e293b;
+        padding: 10px 14px;
+        border-radius: 10px;
+        margin: 6px 0;
+        border-left: 4px solid #667eea;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        transition: all 0.2s;
+        font-size: 0.9rem;
+    }
+    
+    .stats-card:hover {
+        transform: translateX(4px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    
+    .stats-card b {
+        color: #1e293b;
+        font-weight: 600;
+    }
+    
+    .stats-card .value {
+        color: #4f46e5;
+        font-weight: 700;
+        float: right;
+    }
+    
+    /* Chat container */
+    .chat-wrapper {
+        background: rgba(255,255,255,0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 1.5rem;
+        border: 1px solid #e2e8f0;
+        min-height: 10px;
+        box-shadow: 0 1px 10px rgba(0,0,0,0.04);
+    }
+    
+    /* Input */
     .stChatInputContainer {
-        padding-top: 1.2rem !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+        padding-top: 1rem !important;
+        border-top: 1px solid #e2e8f0 !important;
         margin-top: 0.5rem !important;
+        background: transparent !important;
     }
     
     .stChatInputContainer textarea {
-        border-radius: 1.2rem !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        padding: 0.9rem 1.5rem !important;
+        border-radius: 12px !important;
+        border: 2px solid #e2e8f0 !important;
+        padding: 0.8rem 1.2rem !important;
         font-size: 0.95rem !important;
-        background: rgba(255, 255, 255, 0.04) !important;
-        color: #e2e8f0 !important;
+        background: #ffffff !important;
+        color: #1e293b !important;
         transition: all 0.3s ease !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-    }
-    
-    .stChatInputContainer textarea::placeholder {
-        color: #64748b !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
     }
     
     .stChatInputContainer textarea:focus {
-        border-color: #818cf8 !important;
-        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12) !important;
+        border-color: #667eea !important;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
         outline: none !important;
-        background: rgba(255, 255, 255, 0.06) !important;
+    }
+    
+    .stChatInputContainer textarea::placeholder {
+        color: #94a3b8 !important;
     }
     
     .stChatInputContainer button {
-        background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         border: none !important;
-        border-radius: 1rem !important;
+        border-radius: 12px !important;
         padding: 0.6rem 1.5rem !important;
         color: white !important;
         font-weight: 600 !important;
         transition: all 0.3s ease !important;
-        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25) !important;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
     }
     
     .stChatInputContainer button:hover {
-        transform: scale(1.03) !important;
-        box-shadow: 0 6px 24px rgba(99, 102, 241, 0.4) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
     }
     
     .stChatInputContainer button:active {
         transform: scale(0.97) !important;
     }
     
-    /* ===== SPINNER ===== */
+    /* Spinner */
     .stSpinner > div {
-        border-color: #818cf8 !important;
+        border-color: #667eea !important;
         border-top-color: transparent !important;
         border-width: 3px !important;
     }
     
-    /* ===== STATUS ===== */
-    .stStatus {
-        background: rgba(255, 255, 255, 0.03) !important;
-        border-radius: 1.2rem !important;
-        border: 1px solid rgba(255, 255, 255, 0.06) !important;
-        padding: 1.5rem !important;
-        backdrop-filter: blur(10px) !important;
-    }
-    
-    .stStatus .stMarkdown {
-        color: #e2e8f0 !important;
-    }
-    
-    /* ===== EXPANDER ===== */
+    /* Expander */
     .streamlit-expanderHeader {
         background: transparent !important;
-        color: #94a3b8 !important;
+        color: #64748b !important;
         font-size: 0.8rem !important;
         font-weight: 500 !important;
-        padding: 0.5rem 0 !important;
+        padding: 0.3rem 0 !important;
         border: none !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
     }
     
     .streamlit-expanderContent {
-        background: rgba(255, 255, 255, 0.03) !important;
-        border-radius: 0.8rem !important;
-        padding: 0.8rem 1rem !important;
+        background: #f8fafc !important;
+        border-radius: 8px !important;
+        padding: 0.8rem !important;
         font-size: 0.8rem !important;
-        color: #94a3b8 !important;
-        border: 1px solid rgba(255, 255, 255, 0.04) !important;
-        margin-top: 0.5rem !important;
+        color: #475569 !important;
+        border: 1px solid #e2e8f0 !important;
     }
     
-    /* ===== FOOTER ===== */
-    .footer-premium {
-        text-align: center;
-        padding: 1.5rem 0 0.5rem;
-        color: #475569;
-        font-size: 0.7rem;
-        letter-spacing: 0.5px;
-        border-top: 1px solid rgba(255, 255, 255, 0.04);
-        margin-top: 2rem;
+    /* Alertas */
+    .stAlert {
+        border-radius: 12px !important;
+        border: none !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
     }
     
-    .footer-premium .heart {
-        color: #ef4444;
-        display: inline-block;
-        animation: heart-pulse 1.5s ease-in-out infinite;
+    /* Footer */
+    .footer {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+        border: 1px solid #e2e8f0;
     }
     
-    @keyframes heart-pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.2); }
+    .footer .footer-text {
+        color: #64748b;
+        font-size: 0.85rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
     
-    /* ===== SCROLLBAR ===== */
-    ::-webkit-scrollbar {
-        width: 5px;
-    }
-    ::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0.02);
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #4f46e5;
-        border-radius: 2rem;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #7c3aed;
+    .footer .highlight-text {
+        color: #4f46e5;
+        font-weight: 500;
     }
     
-    /* ===== RESPONSIVE ===== */
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    
+    /* Responsive */
     @media (max-width: 768px) {
-        .main-wrapper {
-            padding: 0.8rem 1rem;
-        }
-        .header-premium {
-            padding: 1.5rem 1.5rem;
-        }
-        .header-content {
-            flex-direction: column;
-        }
-        .brand-name {
-            font-size: 1.8rem;
-        }
-        .brand-icon {
-            font-size: 2rem;
-        }
-        .brand-subtitle {
-            font-size: 0.9rem;
-        }
-        .header-right {
-            width: 100%;
-            justify-content: flex-start;
-        }
-        .stat-card {
-            min-width: 60px;
-            padding: 0.4rem 0.8rem;
-        }
-        .stat-number {
-            font-size: 1rem;
-        }
-        .chat-wrapper {
-            padding: 1.2rem;
-        }
-        .stChatMessage [data-testid="stChatMessageContent"] {
-            max-width: 92% !important;
-        }
-        .stChatInputContainer textarea {
-            font-size: 0.85rem !important;
-            padding: 0.7rem 1rem !important;
-        }
+        .user-message, .assistant-message { max-width: 95%; }
+        .main-header h1 { font-size: 1.8rem; }
+        .main-header { padding: 1.5rem; }
+        .main-header p { font-size: 0.95rem; }
+        .chat-wrapper { padding: 1rem; }
+        .footer .footer-text { font-size: 0.75rem; flex-direction: column; text-align: center; }
     }
     
     @media (max-width: 480px) {
-        .brand-name {
-            font-size: 1.4rem;
+        .main-header h1 { font-size: 1.4rem; }
+        .main-header { padding: 1rem; }
+        .user-message, .assistant-message { 
+            padding: 10px 14px;
+            font-size: 0.85rem;
         }
-        .header-premium {
-            padding: 1rem 1rem;
-        }
-        .stat-card {
-            min-width: 50px;
-            padding: 0.3rem 0.6rem;
-        }
-        .stat-number {
-            font-size: 0.8rem;
-        }
-        .stat-label {
-            font-size: 0.5rem;
-        }
-        .chat-wrapper {
-            padding: 0.8rem;
-        }
+        .chat-wrapper { padding: 0.8rem; }
+        .stats-card { font-size: 0.8rem; padding: 8px 12px; }
+        .sidebar-header { font-size: 0.8rem; }
     }
 </style>
 """, unsafe_allow_html=True)
 
-# ============================================================
+# ============================================
 # FUNCIÓN DE INICIALIZACIÓN AUTOMÁTICA
-# ============================================================
+# ============================================
 
 def initialize_agent_auto():
     """
@@ -549,95 +395,204 @@ def initialize_agent_auto():
     logger.info("✅ Agente inicializado correctamente")
     return chain
 
-# ============================================================
-# CONTENIDO PRINCIPAL
-# ============================================================
+# ============================================
+# FUNCIONES DE UTILIDAD
+# ============================================
 
-st.markdown('<div class="main-wrapper">', unsafe_allow_html=True)
+def display_message(role: str, content: str, sources: list = None):
+    """Muestra un mensaje en el chat con formato mejorado"""
+    if role == "user":
+        st.markdown(f'''
+        <div class="message-container">
+            <div class="user-message">{content}</div>
+        </div>
+        ''', unsafe_allow_html=True)
+    else:
+        st.markdown(f'''
+        <div class="message-container">
+            <div class="assistant-message">{content}</div>
+        </div>
+        ''', unsafe_allow_html=True)
+        
+        if sources:
+            st.markdown("**📚 Fuentes consultadas:**")
+            sources_html = ""
+            for source in sources[:3]:
+                sources_html += f'<span class="source-badge">📄 {source}</span>'
+            st.markdown(sources_html, unsafe_allow_html=True)
+            if len(sources) > 3:
+                st.caption(f"... y {len(sources) - 3} fuentes más")
 
-# --- HEADER PREMIUM ---
-st.markdown("""
-<div class="header-premium">
-    <div class="header-content">
-        <div class="header-left">
-            <div class="badge-status">
-                <span class="dot"></span>
-                Sistema en línea · IA Activa
-            </div>
-            <div class="brand-title">
-                <span class="brand-icon">🚀</span>
-                <span class="brand-name">Santos Pegasus</span>
-            </div>
-            <p class="brand-subtitle">
-                Agente de IA para <span class="highlight">Documentación Interna</span>
-                <br><span style="font-size:0.85rem; color:#64748b;">
-                    Consulta manuales, guías y protocolos en lenguaje natural
-                </span>
-            </p>
-        </div>
-        <div class="header-right">
-            <div class="stat-card">
-                <span class="stat-number">5</span>
-                <span class="stat-label">Documentos</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">375</span>
-                <span class="stat-label">Chunks</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">⚡</span>
-                <span class="stat-label">Cohere AI</span>
-            </div>
-        </div>
+
+def get_welcome_message():
+    """Mensaje de bienvenida mejorado"""
+    return """
+    👋 **¡Hola! Soy el asistente virtual de Santos Pegasus Soluciones.**
+
+    Puedo ayudarte con preguntas sobre:
+    - 📋 **Onboarding** - Manual de incorporación
+    - ⚙️ **Backend** - Guías de ingeniería
+    - 🎨 **Frontend** - Estándares de desarrollo
+    - 🚨 **Incidentes** - Protocolos de respuesta
+    - 🏗️ **Arquitectura** - Microservicios
+
+    **¿En qué puedo ayudarte hoy?** 🤔
+    """
+
+# ============================================
+# INICIALIZACIÓN DEL ESTADO
+# ============================================
+
+if "messages" not in st.session_state:
+    st.session_state.messages = [
+        {"role": "assistant", "content": get_welcome_message(), "sources": []}
+    ]
+
+if "k_value" not in st.session_state:
+    st.session_state.k_value = 5
+
+# ============================================
+# SIDEBAR - CONFIGURACIÓN MEJORADA
+# ============================================
+with st.sidebar:
+    st.markdown("""
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🤖</div>
+        <h2 style="color: #667eea; margin: 0; font-size: 1.3rem;">Santos Pegasus</h2>
+        <p style="color: #94a3b8; font-size: 0.8rem; margin: 0.25rem 0 0 0;">Agente IA RAG</p>
     </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown('<div class="sidebar-header">⚙️ Configuración</div>', unsafe_allow_html=True)
+    
+    # Modelo LLM
+    st.markdown("**🧠 Modelo LLM**")
+    st.code("command-a-03-2025", language="bash")
+    st.caption("Proveedor: Cohere Cloud")
+    
+    # Parámetros de búsqueda
+    st.markdown("**📊 Parámetros de búsqueda**")
+    st.session_state.k_value = st.slider(
+        "Documentos recuperados (k)",
+        min_value=1,
+        max_value=10,
+        value=st.session_state.k_value,
+        help="Número de documentos a recuperar de la base vectorial"
+    )
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.caption("🌡️ Temp: 0.3")
+    with col2:
+        st.caption("📏 Contexto: 128k")
+    
+    # Estadísticas
+    st.markdown("---")
+    st.markdown('<div class="sidebar-header">📊 Estadísticas</div>', unsafe_allow_html=True)
+    
+    # Contar documentos y chunks
+    try:
+        from src.config import DOCUMENTS_DIR
+        doc_count = len(list(DOCUMENTS_DIR.glob("*.pdf")))
+        msg_count = len(st.session_state.messages)
+        
+        st.markdown(f"""
+        <div class="stats-card">📚 <b>Documentos:</b> <span class="value">{doc_count}</span></div>
+        <div class="stats-card">💬 <b>Mensajes:</b> <span class="value">{msg_count}</span></div>
+        <div class="stats-card">🧠 <b>Embeddings:</b> <span class="value">Cohere</span></div>
+        """, unsafe_allow_html=True)
+    except Exception as e:
+        st.warning("No se pudieron obtener estadísticas completas")
+    
+    # Acciones
+    st.markdown("---")
+    st.markdown('<div class="sidebar-header">🛠️ Acciones</div>', unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🧹 Limpiar chat", use_container_width=True):
+            st.session_state.messages = [
+                {"role": "assistant", "content": get_welcome_message(), "sources": []}
+            ]
+            st.success("✅ Historial limpiado")
+            st.rerun()
+    
+    with col2:
+        if st.button("🔄 Re-indexar", use_container_width=True):
+            with st.spinner("🔄 Re-indexando documentos..."):
+                try:
+                    chunks = process_documents()
+                    if chunks:
+                        vector_store = create_vector_store(chunks, force_rebuild=True)
+                        if vector_store:
+                            st.success("✅ Re-indexación completada")
+                            st.rerun()
+                        else:
+                            st.error("❌ Error en re-indexación")
+                    else:
+                        st.warning("⚠️ No se encontraron documentos")
+                except Exception as e:
+                    st.error(f"❌ Error: {e}")
+    
+    # Información
+    st.markdown("---")
+    st.markdown('<div class="sidebar-header">ℹ️ Información</div>', unsafe_allow_html=True)
+    st.caption("📌 Versión: 1.0.0")
+    st.caption("🔒 100% Open Source")
+    st.caption("🤖 Cohere Cloud")
+
+# ============================================
+# CONTENIDO PRINCIPAL
+# ============================================
+
+# --- HEADER ---
+st.markdown("""
+<div class="main-header">
+    <h1>🤖 Santos Pegasus - Agente IA RAG</h1>
+    <p>Asistente virtual con Retrieval Augmented Generation</p>
 </div>
 """, unsafe_allow_html=True)
 
-# --- INICIALIZACIÓN DEL AGENTE (con caché) ---
+# --- INICIALIZACIÓN DEL AGENTE ---
 @st.cache_resource
 def get_agent():
     """Obtiene el agente inicializado (cacheado)"""
     return initialize_agent_auto()
 
-# Inicializar el agente
 rag_chain = get_agent()
 
-# Verificar si el agente está disponible
 if rag_chain is None:
+    st.error("""
+    ❌ **No se pudo conectar con el servicio de chat.**
+    
+    Posibles causas:
+    1. **Cohere**: La API Key no está configurada en los Secrets de Streamlit.
+    2. **Vector Store**: No se pudo crear el índice FAISS.
+    
+    **Solución**: Revisa la configuración en `.streamlit/secrets.toml` y asegúrate de que la clave API sea correcta.
+    """)
     st.stop()
 
-# --- CHAT WRAPPER ---
+# --- CHAT ---
 st.markdown('<div class="chat-wrapper">', unsafe_allow_html=True)
 
-# Estado de la conversación
-if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "assistant", "content": "👋 ¡Hola! Soy el agente de IA de **Santos Pegasus Soluciones**. Puedes preguntarme sobre nuestros manuales, guías y protocolos internos. ¿En qué puedo ayudarte?"}
-    ]
-
 # Mostrar mensajes existentes
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        if message["role"] == "assistant":
-            st.markdown(f'<div class="assistant-message">{message["content"]}</div>', unsafe_allow_html=True)
-        else:
-            st.markdown(message["content"])
-        
-        if "sources" in message and message["sources"]:
-            with st.expander("📚 Ver fuentes"):
-                for source in message["sources"]:
-                    st.markdown(f"- {source}")
+for msg in st.session_state.messages:
+    display_message(msg["role"], msg["content"], msg.get("sources", []))
 
-# --- INPUT DEL USUARIO ---
+st.markdown('</div>', unsafe_allow_html=True)
+
+# --- INPUT ---
 if prompt := st.chat_input("💬 Escribe tu pregunta sobre los documentos internos..."):
     # Mostrar mensaje del usuario
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    
     with st.chat_message("user"):
         st.markdown(prompt)
-    st.session_state.messages.append({"role": "user", "content": prompt})
     
     # Generar respuesta
     with st.chat_message("assistant"):
-        with st.spinner("🔍 Buscando en los documentos..."):
+        with st.spinner("🤔 Pensando..."):
             if rag_chain:
                 result = ask_question(rag_chain, prompt)
                 
@@ -651,7 +606,7 @@ if prompt := st.chat_input("💬 Escribe tu pregunta sobre los documentos intern
                 response = "❌ El agente no está disponible. Verifica la configuración."
                 sources = []
             
-            st.markdown(f'<div class="assistant-message">{response}</div>', unsafe_allow_html=True)
+            st.markdown(response)
             
             if sources:
                 with st.expander("📚 Ver fuentes"):
@@ -663,15 +618,19 @@ if prompt := st.chat_input("💬 Escribe tu pregunta sobre los documentos intern
         "content": response,
         "sources": sources
     })
+    
+    st.rerun()
 
-st.markdown('</div>', unsafe_allow_html=True)
-
-# --- FOOTER PREMIUM ---
-st.markdown("""
-<div class="footer-premium">
-    🚀 Santos Pegasus Soluciones &bull; Agente IA v1.0 &bull; 
-    Documentación interna &bull; Hecho con <span class="heart">❤</span> para el equipo
+# --- FOOTER ---
+st.markdown(f"""
+<div class="footer">
+    <div class="footer-text">
+        <span>
+            <span class="highlight-text">⚡</span> command-a-03-2025
+            <span style="margin-left: 1rem;" class="highlight-text">📚</span> k={st.session_state.k_value}
+            <span style="margin-left: 1rem;" class="highlight-text">💡</span> LangChain + FAISS + Cohere
+        </span>
+        <span>v1.0.0</span>
+    </div>
 </div>
 """, unsafe_allow_html=True)
-
-st.markdown('</div>', unsafe_allow_html=True)
