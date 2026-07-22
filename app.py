@@ -4,7 +4,7 @@ Diseño moderno, profesional y accesible para Santos Pegasus Soluciones
 """
 import streamlit as st
 import logging
-from datetime import datetime
+from pathlib import Path
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
@@ -13,6 +13,8 @@ logger = logging.getLogger(__name__)
 # Importar módulos del agente
 from src.agent import create_rag_chain, ask_question
 from src.vectorstore import load_vector_store
+from src.ingest import process_documents
+from src.vectorstore import create_vector_store
 
 # Configuración de la página
 st.set_page_config(
@@ -341,6 +343,59 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ============================================================
+# FUNCIÓN DE INICIALIZACIÓN AUTOMÁTICA
+# ============================================================
+
+def initialize_agent_auto():
+    """
+    Inicializa el agente RAG automáticamente.
+    Si no existe vector store, lo crea desde los documentos.
+    """
+    logger.info("🔄 Inicializando agente RAG...")
+    
+    # 1. Verificar si existe el vector store
+    vector_store = load_vector_store()
+    
+    if vector_store is None:
+        logger.info("📂 No se encontró índice FAISS. Creando uno nuevo...")
+        
+        # Mostrar progreso al usuario
+        with st.status("📚 Inicializando el agente por primera vez...", expanded=True) as status:
+            st.write("🔍 Procesando documentos...")
+            
+            # 2. Procesar documentos
+            chunks = process_documents()
+            
+            if not chunks:
+                status.update(label="❌ Error: No se encontraron documentos", state="error")
+                st.error("⚠️ No se encontraron documentos para procesar.")
+                st.info("💡 Asegúrate de tener archivos PDF en la carpeta `data/documentos/`")
+                return None
+            
+            st.write(f"✅ {len(chunks)} chunks generados")
+            
+            # 3. Crear vector store
+            st.write("🧠 Generando embeddings y creando índice...")
+            vector_store = create_vector_store(chunks, force_rebuild=True)
+            
+            if vector_store is None:
+                status.update(label="❌ Error al crear el vector store", state="error")
+                st.error("❌ Error al crear el índice de búsqueda.")
+                return None
+            
+            status.update(label="✅ Agente inicializado correctamente", state="complete")
+            st.success("🎉 ¡El agente está listo para usar!")
+    
+    # 4. Crear RAG chain
+    chain = create_rag_chain()
+    if chain is None:
+        st.error("❌ Error al crear el agente RAG.")
+        return None
+    
+    logger.info("✅ Agente inicializado correctamente")
+    return chain
+
+# ============================================================
 # CONTENIDO PRINCIPAL
 # ============================================================
 
@@ -374,26 +429,18 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# --- INICIALIZACIÓN DEL AGENTE ---
+# --- INICIALIZACIÓN DEL AGENTE (con caché) ---
 @st.cache_resource
-def initialize_agent():
-    """Inicializa el agente RAG y lo cachea"""
-    logger.info("🔄 Inicializando agente RAG...")
-    
-    vector_store = load_vector_store()
-    if vector_store is None:
-        st.error("⚠️ No se encontró el índice FAISS. Ejecuta primero la ingesta.")
-        return None
-    
-    chain = create_rag_chain()
-    if chain is None:
-        st.error("❌ Error al crear el agente RAG.")
-        return None
-    
-    logger.info("✅ Agente inicializado correctamente")
-    return chain
+def get_agent():
+    """Obtiene el agente inicializado (cacheado)"""
+    return initialize_agent_auto()
 
-rag_chain = initialize_agent()
+# Inicializar el agente
+rag_chain = get_agent()
+
+# Verificar si el agente está disponible
+if rag_chain is None:
+    st.stop()
 
 # --- CONTENEDOR DEL CHAT ---
 st.markdown('<div class="chat-container">', unsafe_allow_html=True)

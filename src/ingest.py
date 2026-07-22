@@ -4,7 +4,7 @@ Carga, procesa y trocea documentos para el pipeline RAG
 """
 import logging
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 
 from pypdf import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -17,9 +17,6 @@ logger = logging.getLogger(__name__)
 def load_documents() -> List[Dict[str, Any]]:
     """
     Carga todos los documentos PDF del directorio configurado.
-    
-    Returns:
-        Lista de diccionarios con {'content': str, 'source': str, 'metadata': dict}
     """
     documents = []
     pdf_files = list(DOCUMENTS_DIR.glob("*.pdf"))
@@ -42,8 +39,6 @@ def load_documents() -> List[Dict[str, Any]]:
                 text = page.extract_text()
                 if text:
                     full_text += text + "\n"
-                else:
-                    logger.warning(f"⚠️ Página {page_num} de {pdf_path.name} sin texto extraíble")
             
             if full_text.strip():
                 documents.append({
@@ -71,20 +66,11 @@ def chunk_documents(documents: List[Dict[str, Any]],
                    chunk_size: int = None, 
                    chunk_overlap: int = None) -> List[Dict[str, Any]]:
     """
-    Trocea documentos en chunks para embeddings usando RecursiveCharacterTextSplitter.
-    
-    Args:
-        documents: Lista de documentos con 'content', 'source' y opcionalmente 'metadata'
-        chunk_size: Tamaño del chunk en caracteres
-        chunk_overlap: Solapamiento entre chunks
-        
-    Returns:
-        Lista de chunks con {'content': str, 'source': str, 'chunk_id': int, 'metadata': dict}
+    Trocea documentos en chunks para embeddings.
     """
     chunk_size = chunk_size or CHUNK_SIZE
     chunk_overlap = chunk_overlap or CHUNK_OVERLAP
     
-    # Configurar el text splitter
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
@@ -100,7 +86,6 @@ def chunk_documents(documents: List[Dict[str, Any]],
         source = doc["source"]
         metadata = doc.get("metadata", {})
         
-        # Dividir el documento en chunks
         chunks = text_splitter.split_text(content)
         
         for i, chunk_text in enumerate(chunks):
@@ -128,50 +113,16 @@ def process_documents() -> List[Dict[str, Any]]:
     """
     logger.info("🚀 Iniciando pipeline de ingesta de documentos")
     
-    # 1. Cargar documentos
     documents = load_documents()
     if not documents:
         logger.error("❌ No se cargaron documentos para procesar")
         return []
     
-    # 2. Trocear documentos
     chunks = chunk_documents(documents)
     
     if chunks:
         logger.info(f"✅ Pipeline completado: {len(chunks)} chunks generados")
-        # Mostrar estadísticas
-        sources = {}
-        for chunk in chunks:
-            source = chunk["source"]
-            sources[source] = sources.get(source, 0) + 1
-        
-        for source, count in sources.items():
-            logger.info(f"   📊 {source}: {count} chunks")
     else:
         logger.warning("⚠️ No se generaron chunks de los documentos")
     
     return chunks
-
-
-# Script independiente para pruebas rápidas
-if __name__ == "__main__":
-    # Configurar logging para pruebas
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
-    
-    # Ejecutar pipeline
-    chunks = process_documents()
-    
-    # Mostrar ejemplo de chunks generados
-    if chunks:
-        print("\n" + "="*50)
-        print("📝 Ejemplo de chunks generados:")
-        print("="*50)
-        for i, chunk in enumerate(chunks[:3], 1):
-            print(f"\nChunk {i}:")
-            print(f"Fuente: {chunk['source']}")
-            print(f"ID: {chunk['chunk_id']}")
-            print(f"Contenido: {chunk['content'][:200]}...")
-            print("-"*40)
